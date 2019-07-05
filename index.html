@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新标签页</title>
+	<style type="text/css">
+		body{
+			background: #f7f7f7;
+		}
+		div,a{
+			margin:0;
+			padding: 0;
+		}
+		.container{
+			width: 100%;
+			height: 96vh;
+			padding: 16% 10% 0;
+			box-sizing: border-box;
+		}
+		.container a,.folder-container a{
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+			display:inline-block;
+			text-align: center;
+			font-size: 14px;
+			color: #333;
+			cursor: pointer;
+			text-decoration: none;
+			background: #fff;
+			border-radius: 6px;
+			margin-right: 12px;
+			margin-bottom: 12px;
+			opacity: 1;
+		}
+		.container a:hover,.folder-container a:hover{
+			background: #fcfcfc;
+		}
+		.container a:active, .folder-container a:active{
+			background: #f7f7f7;
+		}
+		.container a:last-child , .folder-container a:last-child{
+			margin-right: 0;
+		}
+		.folder-container{
+			width: 100%;
+			height: 100vh;
+			padding: 16% 10% 0;
+			box-sizing: border-box;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 3;
+			opacity: 0;
+			background: rgba(0,0,0,0.2);
+			pointer-events: none;
+			visibility: hidden;
+			transition: all 0.2s;
+		}
+		.folder-container .folder{
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.2s;
+		}
+		.folder-container.show, .folder-container .folder.show{
+			visibility: visible;
+			pointer-events: auto;
+			opacity: 1;
+		}
+		 .folder-container .folder.show{
+		 	transform: translateY(164px);
+		 }
+	</style>
+</head>
+<body>
+	<div id="webSites" class="container"></div>
+	<div id="folders" class="folder-container" onclick="showFolder(-1)"></div>
+	<script type="text/javascript">
+		var webSiteList=[
+		{
+			"name":"Baidu",
+			"type":0,
+			"link":"https://www.baidu.com/"
+		},
+		{
+			"name":"Google",
+			"type":0,
+			"link":"https://www.google.com/"
+		},
+		{
+			"name":"IThome",
+			"type":0,
+			"link":"https://www.ithome.com/"
+		},{
+			"name":"Tieba",
+			"type":1,
+			"link":0
+		},
+		{
+			"name":"Tomatooo",
+			"type":0,
+			"link":"https://www.tomatooo.top/user"
+		},
+		{
+			"name":"Pornhub",
+			"type":0,
+			"link":"http://www.pornhub.com/"
+		}];
+		var folders=[
+		[
+		{
+			"name":"PS4吧",
+			"type":0,
+			"link":"https://tieba.baidu.com/f?kw=ps4&ie=utf-8&tab=main"
+		},
+		{
+			"name":"李毅吧",
+			"type":0,
+			"link":"https://tieba.baidu.com/f?kw=%E6%9D%8E%E6%AF%85&fr=home"
+		},
+		{
+			"name":"手表吧",
+			"type":0,
+			"link":"http://tieba.baidu.com/f?kw=%E6%89%8B%E8%A1%A8&fr=home"
+		}]
+		];
+
+		for(var i = 0;i<folders.length;i++){
+			document.getElementById("folders").innerHTML += '<div id="folder'+i+'" class="folder"></div>';
+			for(var j = 0;j<folders[i].length;j++){
+				document.getElementById("folder"+i).innerHTML += '<a href="'+folders[i][j].link+'">'+folders[i][j].name+'</a>';
+			}
+		}
+
+		for(var k = 0;k<webSiteList.length;k++){
+			if(webSiteList[k].type==0){
+			document.getElementById("webSites").innerHTML += '<a href="'+webSiteList[k].link+'">'+webSiteList[k].name+'</a>';
+			}else if(webSiteList[k].type==1){
+			document.getElementById("webSites").innerHTML += '<a onclick="showFolder('+webSiteList[k].link+')">'+webSiteList[k].name+'</a>';
+			}
+		}
+
+		var indexTemp = -1;
+		function showFolder(index){
+			if(index==-1){
+			document.getElementById("folders").setAttribute("class","folder-container");
+			document.getElementById("folder"+indexTemp).setAttribute("class","folder");
+			return false;
+			}
+			document.getElementById("folders").setAttribute("class","folder-container show");
+			document.getElementById("folder"+index).setAttribute("class","folder show");
+			indexTemp = index;
+		}
+	</script>
+</body>
+</html>
