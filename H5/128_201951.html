@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <title>五月，犒赏你的胃与灵魂</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module10.css?version=2019043001">
+    <link rel="stylesheet" href="css/init.css?version=2019042609">
+    <script src="js/flexible.js"></script>
+    <script src="js/fastclick.js"></script>
+</head>
+<body ontouchstart="" onmouseover="" class="fixed">
+<div class="tab">
+    <a id="tab0" href="#objectListWrapper" class="item active" onclick="switchTab(0)">诚实探店</a>
+    <a id="tab1" href="#objectListWrapper" class="item" onclick="switchTab(1)">亲子时光</a>
+    <a id="tab2" href="#objectListWrapper" class="item" onclick="switchTab(2)">约会圣地</a>
+    <a id="tab3" href="#objectListWrapper" class="item" onclick="switchTab(3)">五一不宅家</a>
+</div>
+<div class="container">
+    <div class="swiper-container header-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image/201951/header_swiper (1).jpg"></div>
+            <div class="swiper-slide"><img src="image/201951/header_swiper (2).jpg"></div>
+            <div class="swiper-slide"><img src="image/201951/header_swiper (3).jpg"></div>
+            <div class="swiper-slide"><img src="image/201951/header_swiper (4).jpg"></div>
+            <div class="swiper-slide"><img src="image/201951/header_swiper (5).jpg"></div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="anim">
+            <img class="center" src="image/201951/img_anim_center.svg">
+            <img class="left" src="image/201951/img_anim_left.svg">
+            <img class="right" src="image/201951/img_anim_right.svg">
+        </div>
+        <div class="title">
+            <img src="image/201951/img_header_title.svg">
+        </div>
+        <div class="main-swiper-container">
+            <div class="swiper-container main-swiper-background">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image/201951/main-swiper-blur (1).jpg"></div>
+                    <div class="swiper-slide"><img src="image/201951/main-swiper-blur (2).jpg"></div>
+                    <div class="swiper-slide"><img src="image/201951/main-swiper-blur (3).jpg"></div>
+                    <div class="swiper-slide"><img src="image/201951/main-swiper-blur (4).jpg"></div>
+                </div>
+            </div>
+            <div class="swiper-container main-swiper">
+                <div class="swiper-wrapper">
+                    <a href="#objectListWrapper" class="swiper-slide" onclick="switchTab(0)"><img
+                            src="image/201951/main-swiper (1).jpg">
+                        <div class="tag1">诚实探店</div>
+                        <div class="info">
+                            <div class="title">现在预订还来得及！口碑餐厅大放送</div>
+                            <div class="tag2">精品米其林餐厅</div>
+                        </div>
+                    </a>
+                    <a href="#objectListWrapper" class="swiper-slide" onclick="switchTab(1)"><img
+                            src="image/201951/main-swiper (2).jpg">
+                        <div class="tag1">亲子时光</div>
+                        <div class="info">
+                            <div class="title">没有吃不动的美食，只有溜不动的娃</div>
+                            <div class="tag2">带娃吃饭好去处</div>
+                        </div>
+                    </a>
+                    <a href="#objectListWrapper" class="swiper-slide" onclick="switchTab(2)"><img
+                            src="image/201951/main-swiper (3).jpg">
+                        <div class="tag1">约会圣地</div>
+                        <div class="info">
+                            <div class="title">只有没选对的店，没有感动不了的TA</div>
+                            <div class="tag2">情侣就餐首选</div>
+                        </div>
+                    </a>
+                    <a href="#objectListWrapper" class="swiper-slide" onclick="switchTab(3)"><img
+                            src="image/201951/main-swiper (4).jpg">
+                        <div class="tag1">五一不宅家</div>
+                        <div class="info">
+                            <div class="title">精选城市聚焦打卡点，留下美好瞬间</div>
+                            <div class="tag2">热门城市人气活动</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container object-list-swiper">
+        <div id="objectListWrapper" class="swiper-wrapper"></div>
+    </div>
+</div>
+
+<div class="black-cover" onclick="hideEveryThing()"></div>
+<div class="alert"></div>
+<div class="blank-space"></div>
+
+
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    var listGroup1 = [
+        {
+            "name": "东京",
+            "item": [{
+                "name": "乃木坂しん",
+                "tag": "米其林一星怀石",
+                "reason": "ANA全日空头等舱指定餐饮",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171102/8f769762-bf9d-11e7-b945-06443731d693.jpg",
+                "link": "59e86e87f75737731eddfc6e"
+            }, {
+                "name": "銀座久兵衛",
+                "tag": "老牌寿司",
+                "reason": "培养出无数职人的老字号寿司",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/1b260a38-a430-11e7-b814-06443731d693.jpg",
+                "link": "5786e3fbf7573760de505dbb"
+            }, {
+                "name": "魚政",
+                "tag": "米其林推荐餐厅",
+                "reason": "东京排第三的绝品鳗鱼饭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/db535a70-0e3b-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a7528148c33e44f73c3e28b"
+            }, {
+                "name": "焼肉うしごろ(銀座店)",
+                "tag": "人气餐厅",
+                "reason": "Tabelog银牌高分烤肉",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/d64a1354-c12c-11e7-94a7-06443731d693.jpg",
+                "link": "57ac32faf757372193b924d1"
+            }, {
+                "name": "帰燕",
+                "tag": "米其林一星割烹",
+                "reason": "本地口碑超好的板前割烹",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/7981b3ee-c12b-11e7-94a7-06443731d693.jpg",
+                "link": "59f7e194f75737049af30a77"
+            }, {
+                "name": "醍醐",
+                "tag": "米其林二星斋菜",
+                "reason": "庭院深深的实力派精进料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/de8e493c-a42a-11e7-aeb4-06443731d693.jpg",
+                "link": "57986e65f757371c63736b53"
+            }, {
+                "name": "日山",
+                "tag": "米其林一星",
+                "reason": "人形町著名的老字号寿喜烧",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/716e14fe-a42a-11e7-92a0-06443731d693.jpg",
+                "link": "578f2a28f757374c45a75f67"
+            }, {
+                "name": "すし家一柳",
+                "tag": "Tabelog高分寿司名店",
+                "reason": "米其林一星高性价比银座人气江户前",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/cee7f762-0e3d-11e8-ae7d-06c003b736e8.jpg",
+                "link": "5a7587708c33e44f74a82138"
+            }]
+        }, {
+            "name": "大阪",
+            "item": [{
+                "name": "老松 喜多川",
+                "tag": "怀石料理名店",
+                "reason": "米其林一星老字号怀石料理名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/c45c1050-319f-11e8-a6ba-06c003b736e8.jpg",
+                "link": "57c68bcef75737510313ddc4"
+            }, {
+                "name": "雲鶴",
+                "tag": "新晋割烹",
+                "reason": "大阪城旁新晋米其林割烹新星",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/35b53972-a422-11e7-92a0-06443731d693.jpg",
+                "link": "59b0af05f757370e5ce995d6"
+            }, {
+                "name": "まさる",
+                "tag": "大阪TOP5寿司",
+                "reason": "席位稀少，可提供单点的极上江户前",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/085d3ade-a426-11e7-b814-06443731d693.jpg",
+                "link": "59af7973f757370e5ce9935a"
+            }, {
+                "name": "いし井",
+                "tag": "高分烧鸟",
+                "reason": "米其林一星，日本烧鸟百名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/cd5f5cec-c05d-11e7-b21c-06443731d693.jpg",
+                "link": "57c52568f75737510313daf7"
+            }, {
+                "name": "北新地 福多亭",
+                "tag": "米其林一星铁板烧",
+                "reason": "肉质鲜嫩多汁，舌头都要吞掉的美味",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/3c31726e-0e41-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a790f808c33e40742f51683"
+            }, {
+                "name": "京町料理 みつや",
+                "tag": "米其林一星怀石",
+                "reason": "对食材有着极致追求的本格怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/c45c1050-319f-11e8-a6ba-06c003b736e8.jpg",
+                "link": "57c68bcef75737510313ddc4"
+            }]
+        }, {
+            "name": "京都",
+            "item": [{
+                "name": "木山",
+                "tag": "Tabelog银牌餐厅",
+                "reason": "最高的出汁，京都纯正井水京料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/89c0b588-0e43-11e8-8206-06c003b736e8.jpg",
+                "link": "5a7a93ce8c33e40743031151"
+            }, {
+                "name": "緒方",
+                "tag": "京都最高分的怀石料亭",
+                "reason": "传统茶怀石，京都料亭的顶点",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180329/c6569f74-332f-11e8-9176-06c003b736e8.jpg",
+                "link": "5a7bc5f28c33e42737a7a51d"
+            }, {
+                "name": "鮨 和魂",
+                "tag": "米其林一星寿司",
+                "reason": "环境高大上，近距离欣赏职人表演",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/da07e426-0e43-11e8-8206-06c003b736e8.jpg",
+                "link": "5a7aa1e38c33e40742f51998"
+            }, {
+                "name": "二條 葵月",
+                "tag": "性价比割烹料亭",
+                "reason": "米其林推荐口碑餐厅，菜式多样创新",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/7dc9bab4-0e47-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a7d00e48c33e433a97d965b"
+            }, {
+                "name": "十二段家 本店",
+                "tag": "人气寿喜烧",
+                "reason": "京都老字号金牌，极受本地人欢迎",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/db5ea3a0-ab3c-11e8-8528-06c003b736e8.jpg",
+                "link": "5b860ab48c33e4256fb2a66b"
+            }, {
+                "name": "木乃婦",
+                "tag": "星级怀石老店",
+                "reason": "大厨对日本料理有自己独到的见解",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/55dac860-c142-11e7-b21c-06443731d693.jpg",
+                "link": "59f9454cf75737049af30f61"
+            }]
+        }];
+    var listGroup2 = [
+        {
+            "name": "东京",
+            "item": [{
+                "name": "芝豆腐屋うかい",
+                "tag": "超人气会席料理",
+                "reason": "东京塔下风情满载豆腐屋",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/d64a1354-c12c-11e7-94a7-06443731d693.jpg",
+                "link": "57ac32faf757372193b924d1"
+            }, {
+                "name": "山田屋 丸之内店",
+                "tag": "人气河豚料理",
+                "reason": "米其林三星山田屋最新分店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180328/25fba6fe-322c-11e8-9bcd-06c003b736e8.jpg",
+                "link": "5ab463658c33e461fda44c1f"
+            }, {
+                "name": "福元",
+                "tag": "米其林一星",
+                "reason": "和蔼可亲的大将，家庭风实力派江户前",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171218/77f41e42-e3bb-11e7-b610-06443731d693.jpg",
+                "link": "5a375ac5f757376e04c924d0"
+            }, {
+                "name": "俺の焼肉",
+                "tag": "银座人气烤肉",
+                "reason": "性价比超群，和牛肉质鲜嫩",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/d39055ec-ab7d-11e8-ad71-06c003b736e8.jpg",
+                "link": "5b8640538c33e4256fb2a752"
+            }, {
+                "name": "人形町今半",
+                "tag": "金牌寿喜烧",
+                "reason": "国内知名度高，品质认可金牌连锁出品",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/f4d762d6-ab7d-11e8-b32e-06c003b736e8.jpg",
+                "link": "5b8639c58c33e425701cc9c4"
+            }, {
+                "name": "ととや魚新",
+                "tag": "米其林一星割烹",
+                "reason": "价钱实惠的海鲜割烹盛宴",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/4a0390b0-a416-11e7-a5a0-06443731d693.jpg",
+                "link": "59ae7599f757370e5ce99227"
+            }]
+        }, {
+            "name": "大阪",
+            "item": [{
+                "name": "神户牛烧肉 和ノ宮",
+                "tag": "稀有纯正神户牛",
+                "reason": "金牌连锁神户牛肉专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20181101/e451bc42-dd9e-11e8-86cc-06c003b736e8.jpg",
+                "link": "5bda9c3f8c33e47e30e9cc05"
+            }, {
+                "name": "松阪牛焼肉M",
+                "tag": "大阪人气烤肉店",
+                "reason": "口碑好评优质烤肉，性价比优选",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180828/f8614d88-aa9f-11e8-b6d7-06c003b736e8.jpg",
+                "link": "5b83d3c18c33e40cad8320b7"
+            }, {
+                "name": "本家柴藤",
+                "tag": "超人气会席料理",
+                "reason": "东京塔下风情满载豆腐屋",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180828/1290865a-aaa1-11e8-b6d7-06c003b736e8.jpg",
+                "link": "5b84fe688c33e40cae79dcbe"
+            }, {
+                "name": "長楽",
+                "tag": "星级关东煮",
+                "reason": "用心制作，食材优质的特色美食",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/bef3dd08-c063-11e7-b945-06443731d693.jpg",
+                "link": "59f0639cf757373d07bb73c5"
+            }]
+        }, {
+            "name": "京都",
+            "item": [{
+                "name": "京の焼肉処 弘",
+                "tag": "人气烤肉连锁",
+                "reason": "京都名气极高的连锁和牛烤肉专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/6dc21bd8-ab3c-11e8-8528-06c003b736e8.jpg",
+                "link": "5b8524d48c33e40cad8322fa"
+            }, {
+                "name": "祇をん う桶や う",
+                "tag": "米其林推荐鳗鱼饭",
+                "reason": "京都老字号，预约困难店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/ca0b4a22-ab3c-11e8-9271-06c003b736e8.jpg",
+                "link": "5b8605228c33e4256fb2a64f"
+            }, {
+                "name": "下鴨茶寮",
+                "tag": "老字号京料理",
+                "reason": "体验古色古香京都风情",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180709/f401717e-834d-11e8-b122-06c003b736e8.jpg",
+                "link": "5b43128c8c33e445f3704236"
+            }, {
+                "name": "嵐山よしむら",
+                "tag": "米其林推荐餐厅",
+                "reason": "可以品尝到美味的荞麦与天妇罗",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/b1d745a0-ab3c-11e8-a405-06c003b736e8.jpg",
+                "link": "5b85359a8c33e40cad83234c"
+            }]
+        }];
+    var listGroup3 = [
+        {
+            "name": "东京",
+            "item": [{
+                "name": "Azure 45",
+                "tag": "米其林一星",
+                "reason": "东京塔近在眼前，浪漫法餐代表",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180329/152aca70-3331-11e8-a34b-06c003b736e8.jpg",
+                "link": "577cd23df75737355feec5c1"
+            }, {
+                "name": "Le Moment",
+                "tag": "小众人气法餐",
+                "reason": "法式私藏小酒馆风餐厅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180329/9d6b9db4-3332-11e8-a646-06c003b736e8.jpg",
+                "link": "5ab34ef68c33e461fefd21fe"
+            }, {
+                "name": "Craftale",
+                "tag": "河畔法餐",
+                "reason": "目黑川河畔安静优雅法餐厅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180307/609859ac-21f5-11e8-b27a-06c003b736e8.jpg",
+                "link": "5a7555ef8c33e44f73c3e315"
+            }, {
+                "name": "Signature",
+                "tag": "环境极佳夜景法餐",
+                "reason": "拥有巨型落地玻璃，繁华夜景一览无遗",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180329/5f284e58-3332-11e8-a646-06c003b736e8.jpg",
+                "link": "577cd20cf75737355feec5bb"
+            }, {
+                "name": "Lature",
+                "tag": "野味法餐王者",
+                "reason": "野性享受，迷人的原始美味",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180328/7705aadc-322b-11e8-9994-06c003b736e8.jpg",
+                "link": "5ab8982b8c33e431eafa5bae"
+            }, {
+                "name": "Aroma Fresca",
+                "tag": "纯白童话法餐",
+                "reason": "充满童话气息的装修，小清新风格感受",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180328/b3f07344-322d-11e8-9bcd-06c003b736e8.jpg",
+                "link": "57909d42f757374c4493d1aa"
+            }]
+        }, {
+            "name": "大阪",
+            "item": [{
+                "name": "Fujiya1935",
+                "tag": "米其林二星创意怀石",
+                "reason": "和静清寂的优美环境，一品细腻创意怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/5b8daeb8-a422-11e7-aeb4-06443731d693.jpg",
+                "link": "57c68b6bf75737510313ddb8"
+            }, {
+                "name": "La Cime",
+                "tag": "米其林二星法餐",
+                "reason": "宫崎骏的选择，大阪法餐顶峰",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/d0986d6a-0e49-11e8-86d0-06c003b736e8.jpg",
+                "link": "57c53014f75737510313db25"
+            }, {
+                "name": "ぐるり ",
+                "tag": "精选扒房",
+                "reason": "烛光晚餐首选，优质铁板烧专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/0df34eac-0e43-11e8-93b2-06c003b736e8.jpg",
+                "link": "5a7983038c33e40742f517c7"
+            }, {
+                "name": "莉玖",
+                "tag": "静谧迷人怀石",
+                "reason": "环境雅致，静心品尝精美怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/5b8daeb8-a422-11e7-aeb4-06443731d693.jpg",
+                "link": "57c68b6bf75737510313ddb8"
+            }]
+        }, {
+            "name": "京都",
+            "item": [{
+                "name": "岡崎 つるや ",
+                "tag": "一星老字号",
+                "reason": "环境无敌，文人墨客挚爱传统日式庭院",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/55dac860-c142-11e7-b21c-06443731d693.jpg",
+                "link": "59f9454cf75737049af30f61"
+            }, {
+                "name": "嘗",
+                "tag": "米其林推荐居酒屋",
+                "reason": "私藏小众酒馆，感受女主厨烹饪魅力",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/d536fb1a-0e45-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a7c26098c33e427386729fd"
+            }, {
+                "name": "天麩羅 水暉 ",
+                "tag": "星级天妇罗",
+                "reason": "丽思卡尔顿倾力打造，午餐可享庭院风光",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/ae52d504-31a0-11e8-b602-06c003b736e8.jpg",
+                "link": "5ab373378c33e461fefd22fd"
+            }, {
+                "name": "La Biographie",
+                "tag": "米其林一星法餐",
+                "reason": "和洋折衷料理美学，就餐环境一流优雅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/f4f84b6a-31a0-11e8-8cfe-06c003b736e8.jpg",
+                "link": "57bbe0f0f757371f0651c6e5"
+            }]
+        }];
+
+    var listGroups = [listGroup1, listGroup2, listGroup3];
+
+    for (var h = 0; h < listGroups.length; h++) {
+        var swiperList = '<div id="slide' + h + '" class="swiper-slide"></div>';
+        $(".object-list-swiper .swiper-wrapper").append(swiperList);
+        for (var i = 0; i < listGroups[h].length; i++) {
+            var listGroupItem = '<div id="list' + h + i + '" class="list-container">\n' +
+                '            <div class="title">' + listGroups[h][i].name + '</div>\n' +
+                '            <div class="content"></div>\n' +
+                '        </div>';
+            $("#slide" + h).append(listGroupItem);
+            for (var j = 0; j < listGroups[h][i].item.length; j++) {
+                var listItem = '<a id="' + listGroups[h][i].item[j].link + '" href="legooorderapp://shop/' + listGroups[h][i].item[j].link + '" class="item" onclick="toshop(this)">\n' +
+                    '        <img class="image" src="' + listGroups[h][i].item[j].image + '"/>\n' +
+                    '        <div class="tag"><span>' + listGroups[h][i].item[j].tag + '</span></div>\n' +
+                    '        <div class="info">\n' +
+                    '        <div class="name">' + listGroups[h][i].item[j].name + '</div>\n' +
+                    '        <div class="reason">' + listGroups[h][i].item[j].reason + '</div></div>\n' +
+                    '    </a>';
+                $("#list" + h + i + " .content").append(listItem);
+            }
+        }
+    }
+
+    var planList = [
+        {
+            "city": '东京',
+            "item": [{
+                "title": "京王花园BBQ大会",
+                "image": "image/201951/img_plan1 (1).jpg",
+                "time": "2019.04.29 - 11.24 ; 11:00 - 14:00；15 - 18:00；19:00 - 22:00",
+                "location": "東京都新宿区西新宿1-1-4 京王百貨店新宿店",
+                "price": "成人2160日元；小学生1080日元；小学生以下免费",
+                "info": "京王百货广场顶层露天花园BBQ大会现正火热进行中，新宿最火热的屋顶酒吧加烧烤，迎接夏天的最佳方式。BBQ大会每日共分三轮举办，可以从早high到晚，所有食材均由百货负层美食部提供，每一轮都有新鲜直供，保证食材优质鲜度。夜晚在屋顶上还会有亮灯仪式，4万8千个灯泡为夜空也增添了一份迷人气息。"
+            }, {
+                "title": "Manpaku美食节",
+                "image": "image/201951/img_plan1 (2).jpg",
+                "time": "2019.05.16 - 06.03；10:30 - 21:00",
+                "location": "東京都立川市緑町3173",
+                "price": "平日500日元/人；周末800日元/人；中学生以下免费",
+                "info": "2018年吸引了42万的来场者，激动人心的2019まんパク（Manpaku）即将开幕！まんパク是日本知名的美食展，各式优质肉品、生猛海鲜、拉面、天妇罗、甜品等约70家店铺，数百种类美食应有尽有。今年特别集合了日本不少地方小众美食，以及人气物产店，甚至还能在现场观赏到金枪鱼解体。"
+            }, {
+                "title": "东京Walker29周年美食盛典",
+                "image": "image/201951/img_plan1 (3).jpg",
+                "time": "2019.04.27 - 2019.05.06；09:00 - 20:00",
+                "location": "東京都稲城市矢野口4015-1",
+                "price": "",
+                "info": "东京Yomiuri Land从2011年开始每年都会举办美食节，今年联手东京Walker29周年美食盛典，将东京Walker编辑部严选出来的肉料理专门店与拉面店集合起来，一次性在美食节上全部放出！再也不用费尽心机找店，肉类名店&人气拉面一网打尽。活动期间，会场每日还会举行各类表演活动，吃货绝对不能错过的味蕾盛宴。"
+            }, {
+                "title": "第二届涉谷面包节",
+                "image": "image/201951/img_plan1 (4).jpg",
+                "time": "2019.05.02 - 07；10:00 - 21:00",
+                "location": "東京都渋谷区渋谷2-24-1 東急百貨店東横店",
+                "price": "",
+                "info": "去年大受好评的涉谷面包节本年度再开，从日本全国严格挑选人气美味面包，在涉谷集结！无论是小众还是网红包点，人气美味绝无遗漏。现场每日都会请来世界有名的面包职人，现场制作并对各系面包进行讲解，面包爱好者们一定不会错过的新鲜出炉面包，面包的香气将会充斥整条街道。"
+            }, {
+                "title": "亀戸天神社藤花观赏",
+                "image": "image/201951/img_plan1 (5).jpg",
+                "time": "2019.04.13 - 05.06",
+                "location": "東京都江東区亀戸3-6-1",
+                "price": "",
+                "info": "龟户天神社是东京都最为知名的花之神社。 距离东京车站10分钟车程，临近浅草寺和东京新地标－天空树。坐落在日本居住区龟户的龟户天神社环境优美，是喧嚣都市中的一块净土。 之所以被称为“花之神社“，每年的2月300多株梅树开花之时清幽的红梅香沁人心脾，到了4月中旬境内百年紫藤满开之季如同画中仙境，9月时为纪念菅公而举办的赏菊活动弥漫着满满的秋之韵味。 这3个季节是东京都内绝不可错过的美景之一。"
+            }, {
+                "title": "2019日比谷公园放题大会.",
+                "image": "image/201951/img_plan1 (6).jpg",
+                "time": "2019.05.03 - 06；11:00 - 21:00",
+                "location": "東京都千代田区日比谷公園1-6",
+                "price": "",
+                "info": "以振兴家乡为口号，日比谷公园定额制自助放题大会再次开展。大会有来自日本全国各地的人气店，乃至海外名店多达40家，各色菜系一应俱全，让人眼花缭乱的丰富菜单，必定让吃货们流连忘返。每位仅需3800日元即可全场通吃，不限时间，五月选一天泡在这里吧！"
+            }]
+        },
+        {
+            "city": '大阪',
+            "item": [{
+                "title": "2019大阪肉Festival ",
+                "image": "image/201951/img_plan2 (1).jpg",
+                "time": "2019.04.26 - 05.06 ; 10:00 - 21:00",
+                "location": " 1-1 Nagai Koen, Sumiyoshi-ku, Osaka",
+                "price": "",
+                "info": "累积到场人数突破630万人次的日本国内最大级肉类盛宴，肉Festival在2019年迎来了5周年纪念，宣传声势也比往年更加高涨。在大阪肉祭上，只有你想不到的，没有你吃不到的肉，初级的厚切牛舌、肉汁汉堡、肉寿司，到名扬海外的高级神户牛，一应俱全，在你味蕾上绽放的吃肉系派对。"
+            }, {
+                "title": "大阪2019饺子美食节",
+                "image": "image/201951/img_plan2 (2).jpg",
+                "time": "2019.04.30 - 05.06；10:00 - 20:00",
+                "location": "大阪府大阪市中央区大阪城",
+                "price": "免费入场；食券600日元/张",
+                "info": "日式煎饺爱好者福音，与中国饺子完全不同的美味，尽在大阪饺子美食节。饺子节秉承着创新与激发创意的精神，每年都会涌现一大批让人惊艳的新种类饺子。日式饺子名店都将会派出代表参加本次活动，除了能吃到定番的人气美味之外，大师们独具匠心的创意饺子美食也可一并吞进腹中。"
+            }, {
+                "title": "第六届咖喱博览会",
+                "image": "image/201951/img_plan2 (3).jpg",
+                "time": "2019.05.03 - 06；09:30 - 17:00",
+                "location": "大阪府吹田市千里万博公園",
+                "price": "成人250日元；中小学生70日元",
+                "info": "西日本最大级咖喱盛典，主办方严格挑选出约30家人气咖喱店参展，每年都会吸引到大批对咖喱情有独钟的食客。个性十足的独创咖喱、欧风咖喱、甜口咖喱，让人目不暇接的咖喱天堂，光是闻到味道已经会让人胃口大开。"
+            }, {
+                "title": "史努比 X Cafe Lab",
+                "image": "image/201951/img_plan2 (4).jpg",
+                "time": "2019.04.13 - 06.16；08:00 - 23:00",
+                "location": "大阪府大阪市北区大深町3-1　グランフロント大阪北館",
+                "price": "",
+                "info": "大阪史努比展与Cafe Lab联动合作，推出期间限定史努比咖啡厅。活动期间每日都会有独特的菜单提供，包括过往展出过的史努比主题活动也会再次限时复活，喜欢史努比的粉丝们不妨将Brunch放在这里哦。"
+            }, {
+                "title": "「HIBIKA」2019春之四季菓子",
+                "image": "image/201951/img_plan2 (5).jpg",
+                "time": "2019.03.01 - 05.31；10:00 - 20:00",
+                "location": "大阪府大阪市北区角田町8-7 阪急うめだ本店B1洋菓子卖场",
+                "price": "",
+                "info": "日本四季的迷人魅力，尽在职人用心制作的洋果子之中。本次以季节为主题，HIBIKA将在19年开展四次季节菓子活动。期间限定推出的季节甜品全部出自名师之手，10种甜品蛋糕每天限量贩售，在大阪的小可爱们路过千万不要错过啦。"
+            }, {
+                "title": "北海道美食节",
+                "image": "image/201951/img_plan2 (6).jpg",
+                "time": "2019.04.24 - 05.07；10:00 - 20:00",
+                "location": "大阪府大阪市阿倍野区阿倍野筋1-1-43",
+                "price": "",
+                "info": "持续整整两周的北海稻美食节在大阪隆重登场，首次在关西露面的北海道名店、地方人气网红小吃店、北海道直送海产寿司等约50家店铺齐聚，让你大快朵颐。现场更有现做味噌，调配拉面秘方等活动，最适合一家大小畅吃开怀。"
+            }, {
+                "title": "2019大阪喜林草祭",
+                "image": "image/201951/img_plan2 (7).jpg",
+                "time": "2019.04.13 - 05.06；09:00 - 17:00",
+                "location": "大阪市此花区北港緑地2丁目",
+                "price": "成人900日元；儿童500日元",
+                "info": "大阪首届喜林草祭已经热情绽放，一望无际的花海位于大阪湾，占地4.4公顷，可欣赏到3个品种大约100万株的喜林草，堪称关西最大规模。喜林草每年4月下旬至5月上旬开花，花期特别短，满开时整个平原目之所及都是一片青色，景色非常壮丽。大阪网红打卡拍照圣地，占据朋友圈点赞TOP1非你莫属！"
+            }]
+        },
+        {
+            "city": '京都',
+            "item": [{
+                "title": "京都Tower55周年春之感谢祭",
+                "image": "image/201951/img_plan3 (1).jpg",
+                "time": "2019.04.05 - 06.30；11:30 - 13:00 ; 13:30 - 15:00 ; 17:30 - 21:00",
+                "location": "京都府京都市下京区烏丸通七条下る東塩小路町721-1",
+                "price": "成人2600日元；小学生1500日元；幼儿800日元",
+                "info": "京都Tower Hotel迎来55岁诞辰，位于酒店3楼的餐厅将会开展期间限定自助大餐。本次活动为期两个月，以“心动、惊喜”为主题，自助餐会上将无限量供应30厘米厚的国产黑毛和牛芝士肉汉堡，以及全长约1米的巨型鱼肉肠等，让人目瞪口呆的各式巨无霸们将悉数登场，非常符合本次主题。自助餐无需提前预约，更多惊喜菜单等你发现。"
+            }, {
+                "title": "Super Strawberry Fair 2019",
+                "image": "image/201951/img_plan3 (2).jpg",
+                "time": "2019.04.26 - 05.06；15:30 - 17:00（90分钟制）",
+                "location": "京都Century Hotel 2F",
+                "price": "成人5000日元；小学生2500日元；幼儿1200日元",
+                "info": "京都Century Hotel、京都Tower酒店、琵琶湖酒店强强联手推出期间限定草莓主题乐园。乐园以自助餐形式开放，无限量供应以日本草莓为主的各类草莓甜品点心，日本草莓那独特、恰到好处的酸甜必让人大呼过瘾。本次自助餐甜品均出自酒店饼房大师之手，从设计到制作花费了无数心血，可以一次品尝到30个品种的极品日本草莓，一定不要错过。"
+            }, {
+                "title": "京都夜空坐禅",
+                "image": "image/201951/img_plan3 (3).jpg",
+                "time": "2019.03.13 - 05.08；18:30 - 20:30",
+                "location": "京都市北区紫野大徳寺町4-1",
+                "price": "每位3000日元（含坐禅指导费、茶、和果子、税费）",
+                "info": "黄金周放空自己，在宁静平和的参禅中度过。京都大徳寺大慈院正在开展夜晚坐禅活动，太阳下山夜幕降临后的2小时内，在枯山水式庭院中静坐参禅。且听风吟草东，将闹事的烦嚣全部卸下，身心都会得到极大的舒缓。坐禅不接受预订，每日定员20人。"
+            }, {
+                "title": "京都葵祭",
+                "image": "image/201951/img_plan3 (4).jpg",
+                "time": "2019.05.15；10:30 - 15:30",
+                "location": "京都御所～下鴨神社～上賀茂神社",
+                "price": "",
+                "info": "每年的5月15日，京都市左京区下鸭泉川町的下鸭神社和北区上贺茂本山的上贺茂神社都会举办“葵祭”。“葵祭”是有名的“京都三大祭”之一，这是一项古典而优雅的节庆活动，活动期间一千年前的豪华队列重现京都，令人仿佛回到过去的时代。游行队伍10点半前后从天皇一直工作、生活到1869年的京都御所（京都市上京区京都御苑）出发，经过下鸭神社，15点半前后抵达上贺茂神社。到达神社后，将开始舞蹈、骑马疾驶等现场表演。"
+            }]
+        }
+    ];
+
+    $(".object-list-swiper .swiper-wrapper").append('<div class="swiper-slide"><div id="planList" class="plan"></div></div>');
+    for (var k = 0; k < planList.length; k++) {
+        var planLists = '<div id="planList' + k + '" class="plan-list">\n' +
+            '            <div class="city">' + planList[k].city + '</div>\n' +
+            '            <div class="content"></div>\n' +
+            '        </div>';
+        $(".plan").append(planLists);
+        for (var l = 0; l < planList[k].item.length; l++) {
+            var planListAlertItem = '<div id="alertItem' + k + l + '" class="alert-item" onclick="hideEveryThing()">\n' +
+                '            <div class="content">\n' +
+                '            <div class="image"><img src="' + planList[k].item[l].image + '"></div>\n' +
+                '            <div class="title">' + planList[k].item[l].title + '</div>\n' +
+                '            <div class="time">时间：' + planList[k].item[l].time + '</div>\n' +
+                '            <div class="location">地址：' + planList[k].item[l].location + '</div>\n' +
+                '            <div class="price">' + ((planList[k].item[l].price !== "") ? ("价格: " + planList[k].item[l].price) : ("")) + '</div>\n' +
+                '            <div class="info">' + planList[k].item[l].info + '</div>\n' +
+                '            <div class="blank-space"></div>\n' +
+                '            </div>\n' +
+                '            <img class="btn-back" src="image/201951/img_alert_close.svg">\n' +
+                '        </div>';
+            var planListItem = '<div class="item" onclick="showAlert(' + k + ',' + l + ')">\n' +
+                '            <img class="image" src="' + planList[k].item[l].image + '">\n' +
+                '            <div class="info-block">\n' +
+                '            <div class="title">' + planList[k].item[l].title + '</div>\n' +
+                //  '            <div class="time">' + planList[i].item[j].time + '</div>\n' +
+                '            <div class="location">' + planList[k].item[l].location + '</div>\n' +
+                //    '            <div class="price">' + planList[i].item[j].price !== "" ? planList[i].item[j].price : "" + '</div>\n' +
+                '            <div class="info">' + planList[k].item[l].info + '</div>\n' +
+                '        </div>\n' +
+                '        </div>';
+            $("#planList" + k + " .content").append(planListItem);
+            $(".alert").append(planListAlertItem);
+        }
+    }
+
+    function switchTab(index) {
+        $(".tab .item").removeClass("active");
+        $("#tab" + index).addClass("active");
+        if (index === 3) {
+            $(".tab").scrollLeft($(".tab")[0].scrollWidth)
+        } else {
+            $(".tab").scrollLeft(0)
+        }
+    }
+
+    function hideEveryThing() {
+        $(".black-cover").removeClass("show");
+        $(".container").removeClass("scale");
+        $(".alert-item").removeClass("show");
+        $(".tab").removeClass("hide");
+    }
+
+    function showAlert(group, single) {
+        $(".container").addClass("scale");
+        $(".tab").addClass("hide");
+        $("#alertItem" + group + single).addClass("show");
+        $(".black-cover").addClass("show");
+    }
+
+
+    // $(".list-container .title-block .image").css("height", ($(window).width() + 500) * 9 / 32);
+
+
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+
+        $('a[href^="#"]').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - 200}, 400);
+        });
+    });
+
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+    $(document).ready(function () {
+        var Swiper1 = new Swiper('.header-swiper', {
+            autoHeight: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 1500
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+        var Swiper2 = new Swiper('.main-swiper-background', {
+            autoHeight: true,
+            allowTouchMove: false,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    switchTab(this.activeIndex)
+                },
+            }
+        });
+        var Swiper3 = new Swiper('.main-swiper', {
+            autoHeight: true,
+            slidesPerView: 'auto',
+            slideToClickedSlide: true
+        });
+        var Swiper4 = new Swiper('.object-list-swiper', {
+            autoHeight: true,
+            allowTouchMove: false,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        Swiper3.controller.control = [Swiper2, Swiper4];
+
+        $('#tab0').click(function () {
+            Swiper3.slideTo(0, 500, false);
+        });
+        $('#tab1').click(function () {
+            Swiper3.slideTo(1, 500, false);
+        });
+        $('#tab2').click(function () {
+            Swiper3.slideTo(2, 500, false);
+        });
+        $('#tab3').click(function () {
+            Swiper3.slideTo(3, 500, false);
+        });
+    });
+
+    var stickyBar = $(".tab");
+    var stickyLine = $("#objectListWrapper").offset().top - 220;
+
+    function toggleSticky(e) {
+        window.scrollY > stickyLine ? stickyBar.addClass('sticky') : stickyBar.removeClass('sticky');
+    }
+
+    $(document).on('scroll', toggleSticky);
+    $(document).on('touchmove', toggleSticky);
+
+    window.onload = function () {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    };
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+
+    // 小程序无时讯
+    // function toevent(e) {
+    //     wx.miniProgram.navigateTo({
+    //         url: '/pages/detailpages/planpage?planid=' + e.id
+    //     })
+    // }
+
+    function toproduct(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/productinfo?productid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>

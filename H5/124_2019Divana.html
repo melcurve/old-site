@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <title>Divana Spa</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module9.css?version=2019041808">
+    <link rel="stylesheet" href="css/init.css?version=01">
+    <script src="js/flexible.js"></script>
+    <script src="js/fastclick.js"></script>
+    <style>
+        .header-info {
+            background: url("./image/2019Divana/bg.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .header-info.complete {
+            height: 10rem;
+        }
+    </style>
+</head>
+<body ontouchstart="" onmouseover="" class="fixed">
+<div class="container">
+    <div class="header-info" onclick="switchHeaderInfo()">
+        <img class="left" src="image/2019Divana/logo.png">
+        <div class="right">
+            <div class="title">Divana Spa</div>
+            <div class="content">
+                Divana Spa 是泰国著名的水疗连锁品牌，轻奢的价格，带给你无与伦比的按摩体验。<br><br>
+                泰国明星马里奥都曾打卡的马杀鸡店，作为精致的猪猪女孩，怎能不来一起感受下SPA这件心动小事。<br><br>
+                Divana Spa 在曼谷市区共有5家分店，各有特色。店内提供多种项目，采用自主研发的香薰、精油等一系列美容护肤产品，配以专业的技法，带给你从头到脚的享受，宛若新生。
+            </div>
+        </div>
+    </div>
+    <div class="tab"></div>
+
+    <div id="tablist">
+        <div class="title">Divana Spa 分店</div>
+        <div class="item-block type1"></div>
+    </div>
+    <div class="grey-space"></div>
+    <div class="list-container"></div>
+    <div class="blank-space">.</div>
+</div>
+
+
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    var tabItem = [{
+        "name": "Divana Massage & Spa (Asoke店)",
+        "simple_name": "Asoke店",
+        "image": "http://app.eatgreat.net/static/pic/product/20180427/2e0dd7a8-49e3-11e8-972e-06c003b736e8.jpeg"
+    }, {
+        "name": "Divana Virtue Spa (Silom店)",
+        "simple_name": "Silom店",
+        "image": "http://app.eatgreat.net/static/pic/product/20180427/ced87d60-49ec-11e8-972e-06c003b736e8.jpeg"
+    }, {
+        "name": "Divana Divine Spa (Thonglor店)",
+        "simple_name": "Thonglor店",
+        "image": "http://app.eatgreat.net/static/pic/product/20180427/91962dac-4a0b-11e8-b47e-06c003b736e8.jpeg"
+    }, {
+        "name": "Divana Nurture Spa (Nana店)",
+        "simple_name": "Nana店",
+        "image": "http://app.eatgreat.net/static/pic/product/20180427/6b6898fc-49f4-11e8-afa0-06c003b736e8.jpeg"
+    }, {
+        "name": "Dii Wellness Med Spa (Central Embassy店)",
+        "simple_name": "Central Embassy店",
+        "image": "http://app.eatgreat.net/static/pic/product/20180427/a443b776-49f7-11e8-a18c-06c003b736e8.jpeg"
+    }];
+
+    for (var i = 0; i < tabItem.length; i++) {
+        var _tabItem = '<a href="#list' + i + '" class="item">\n' +
+            '                <img class="image" src="' + tabItem[i].image + '">\n' +
+            '                <div class="title">' + tabItem[i].name + '</div>\n' +
+            '            </a>';
+        var _tabItemSimple = '<a id="tab' + i + '" href="#list' + i + '" class="item">\n' +
+            '                <div class="title">' + tabItem[i].simple_name + '</div>\n' +
+            '            </a>';
+        $("#tablist .item-block").append(_tabItem);
+        $(".tab").append(_tabItemSimple);
+    }
+
+    $("#tablist .item .image").css("height", ($(window).width() - 200) * 9 / 32);
+
+    var list1item = {
+        name: "Divana Massage & Spa (Asoke店)",
+        content: "Divana Massage & Spa位于素坤逸25巷，定位是“泰式花园SPA”。\n" +
+            "这里绿树掩映、鸟语花香，环境十分优美。主体建筑是一栋精心设计的别墅，一入内，柑橘精油的香气便会萦绕在你身边。\n",
+        image: "http://app.eatgreat.net/static/pic/product/20180427/2e0dd7a8-49e3-11e8-972e-06c003b736e8.jpeg",
+        product: [{
+            "name": "暹罗安神按摩 (70分钟)",
+            "price1": "1188",
+            "price2": "1250",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6ea025fa-49ed-11e8-8891-06c003b736e8.jpeg"
+        }, {
+            "name": "芳香疗法身体按摩 (90分钟)",
+            "price1": "1758",
+            "price2": "1850",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/76647fca-49ed-11e8-8daf-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-感官享受套餐 (130分钟)",
+            "price1": "2708",
+            "price2": "2850",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/2e0e0160-49e3-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-异域风情套餐 (160分钟)",
+            "price1": "3658",
+            "price2": "3850",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6ea025fa-49ed-11e8-8891-06c003b736e8.jpeg"
+        }, {
+            "name": " SPA身体护理-水疗爱好者套餐 (180分钟)",
+            "price1": "3752",
+            "price2": "3950",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/76647fca-49ed-11e8-8daf-06c003b736e8.jpeg"
+        }, {
+            "name": "阿育吠陀式-玫瑰魅力套餐 (210分钟)",
+            "price1": "5938",
+            "price2": "6250",
+            "unit": "泰铢",
+            "link": "5ae2c1358c33e40289331b7d",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/2e0e0160-49e3-11e8-972e-06c003b736e8.jpeg"
+        }]
+    };
+
+    var list2item = {
+        name: "Divana Virtue Spa (Silom店)",
+        content: "Divana Virtue Spa位于是隆区，注重天然草本水疗，曾获CNN专题报导&亚洲奢华SPA大奖。这里融合了亚洲智慧的温泉疗法和自然愈合疗法，从排毒、基础面部护理、按摩到全套SPA护理，都旨在调节和满足您的健康需求。",
+        image: "http://app.eatgreat.net/static/pic/product/20180427/ced87d60-49ec-11e8-972e-06c003b736e8.jpeg",
+        product: [{
+            "name": "暹罗感官按摩 (70分钟)",
+            "price1": "1188",
+            "price2": "1250",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/ced8a60a-49ec-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "芳香放松按摩 (90分钟)",
+            "price1": "1758",
+            "price2": "1850",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/9117feb6-49f0-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "红宝石热石按摩 (120分钟)",
+            "price1": "3182",
+            "price2": "3350",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/911809c4-49f0-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-茉莉花赞歌套餐(180分钟)",
+            "price1": "4608",
+            "price2": "4850",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/91181072-49f0-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-自然魅力套餐(190分钟)",
+            "price1": "3942",
+            "price2": "4150",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/9117feb6-49f0-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "圣白兰全套护理疗程(210分钟)",
+            "price1": "7552",
+            "price2": "7950",
+            "unit": "泰铢",
+            "link": "5ae2d1628c33e4028a5a9b84",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/911809c4-49f0-11e8-972e-06c003b736e8.jpeg"
+        }]
+    };
+
+    var list3item = {
+        name: "Divana Divine Spa (Thonglor店)",
+        content: "Divana Divine Spa是Divana Spa品牌旗舰店，定位是“都市禅意SPA”。\n" +
+            "这里好似一片宁静绿洲，从店门、绿树、沙石、室内装饰等景观设计，到SPA项目菜单，均带有禅意的微妙色调。主打全系列有机SPA产品，您将获得一种“东方有机水疗”体验。\n",
+        image: "http://app.eatgreat.net/static/pic/product/20180427/91962dac-4a0b-11e8-b47e-06c003b736e8.jpeg",
+        product: [{
+            "name": "暹罗安神放松按摩(70分钟)",
+            "price1": "1188",
+            "price2": "1250",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a64f98f0-4a0b-11e8-94eb-06c003b736e8.jpeg"
+        }, {
+            "name": "有机芳香精油按摩(90分钟)",
+            "price1": "1758",
+            "price2": "1850",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/ab1a7170-4a0b-11e8-94eb-06c003b736e8.jpeg"
+        }, {
+            "name": "有机排毒按摩(100分钟)",
+            "price1": "2090",
+            "price2": "2200",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/9c9e55bc-4a0b-11e8-94eb-06c003b736e8.jpeg"
+        }, {
+            "name": "有机SPA护理-纯净享受套餐(130分钟)",
+            "price1": "2708",
+            "price2": "2850",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/97d479b2-4a0b-11e8-a572-06c003b736e8.jpeg"
+        }, {
+            "name": "有机SPA护理-热情洋溢套餐(180分钟)",
+            "price1": "3752",
+            "price2": "3950",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a64f98f0-4a0b-11e8-94eb-06c003b736e8.jpeg"
+        }, {
+            "name": "有机黄金泰丝-皇家护理套餐(210分钟)",
+            "price1": "6600",
+            "price2": "6950",
+            "unit": "泰铢",
+            "link": "5ae1af538c33e474b9432864",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/ab1a7170-4a0b-11e8-94eb-06c003b736e8.jpeg"
+        }]
+    };
+
+    var list4item = {
+        name: "Divana Nurture Spa (Nana店)",
+        content: "Divana Nurture Spa是曼谷首家泰式疗养SPA中心，将传统的泰国医药和东方疗养智慧、与现代医疗技术融合在一起，旨在帮助人们保持健康生活。",
+        image: "http://app.eatgreat.net/static/pic/product/20180427/6b6898fc-49f4-11e8-afa0-06c003b736e8.jpeg",
+        product: [{
+            "name": "感官芳香疗法按摩(90分钟)",
+            "price1": "1758",
+            "price2": "1850",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6b68a43c-49f4-11e8-afa0-06c003b736e8.jpeg"
+        }, {
+            "name": "泰式古法按摩(120分钟)",
+            "price1": "1758",
+            "price2": "1850",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6b68ab62-49f4-11e8-afa0-06c003b736e8.jpeg"
+        }, {
+            "name": "办公室综合症补救按摩(120分钟)",
+            "price1": "2612",
+            "price2": "2750",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/8a3bddf2-49f4-11e8-972e-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-喜悦摇篮曲套餐(150分钟)",
+            "price1": "3752",
+            "price2": "3950",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6b68a43c-49f4-11e8-afa0-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-维曼套餐(160分钟)",
+            "price1": "3658",
+            "price2": "3850",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/6b68ab62-49f4-11e8-afa0-06c003b736e8.jpeg"
+        }, {
+            "name": " SPA身体护理-Samsara套餐(190分钟)",
+            "price1": "4608",
+            "price2": "4850",
+            "unit": "泰铢",
+            "link": "5ae2de018c33e4028a5a9b9f",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/8a3bddf2-49f4-11e8-972e-06c003b736e8.jpeg"
+        }]
+    };
+
+    var list5item = {
+        name: "Dii Wellness Med Spa (Central Embassy店)",
+        content: "Divana Wellness Med Spa位于顶级购物中心Central Embassy，这是Divana最具创新和特色的SPA店。\n" +
+            "创造性地将医疗美容技术融入到SPA护理中，定位是“医疗美容级SPA”。\n",
+        image: "http://app.eatgreat.net/static/pic/product/20180427/a443b776-49f7-11e8-a18c-06c003b736e8.jpeg",
+        product: [{
+            "name": "海洋舒压疗程(70分钟)",
+            "price1": "2090",
+            "price2": "2200",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a443bf50-49f7-11e8-a18c-06c003b736e8.jpeg"
+        }, {
+            "name": "被动瑜伽按摩(90分钟)",
+            "price1": "2755",
+            "price2": "2900",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a443c5d6-49f7-11e8-a18c-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-平衡套餐(120分钟)",
+            "price1": "3700",
+            "price2": "3900",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/bd3b0838-49f7-11e8-afa0-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-温泉蚕丝套餐(180分钟)",
+            "price1": "7500",
+            "price2": "7900",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a443bf50-49f7-11e8-a18c-06c003b736e8.jpeg"
+        }, {
+            "name": "SPA身体护理-排毒套餐(150分钟)",
+            "price1": "5225",
+            "price2": "5500",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/a443c5d6-49f7-11e8-a18c-06c003b736e8.jpeg"
+        }, {
+            "name": "海洋皇后奢华套餐(300分钟)",
+            "price1": "21370",
+            "price2": "22500",
+            "unit": "泰铢",
+            "link": "5ae2e3ab8c33e40289331bc6",
+            "image": "http://app.eatgreat.net/static/pic/product/20180427/bd3b0838-49f7-11e8-afa0-06c003b736e8.jpeg"
+        }]
+    };
+
+    var listsitem = [list1item, list2item, list3item, list4item, list5item];
+
+    for (var k = 0; k < listsitem.length; k++) {
+        var _listsitem = '<div id="list' + k + '" class="list">\n' +
+            '            <div class="title-block">\n' +
+            '                <img class="image" src="' + listsitem[k].image + '">\n' +
+            '                <div class="title">' + listsitem[k].name + '</div>\n' +
+            '                <div class="content">' + listsitem[k].content + '</div>\n' +
+            '            </div>\n' +
+            '            <div id="listItem' + k + '" class="item-block type2">\n' +
+            '            </div>\n' +
+            '            </div>\n' +
+            '            <div class="grey-space"></div>';
+        $('.list-container').append(_listsitem);
+        for (var l = 0; l < listsitem[k].product.length; l++) {
+            var __listsitem = '<a id="' + listsitem[k].product[l].link + '" href="legooorderapp://product/' + listsitem[k].product[l].link + '" class="item" onclick="toproduct(this)">\n' +
+                '                    <img class="left" src="' + listsitem[k].product[l].image + '">\n' +
+                '                    <div class="right">\n' +
+                '                        <div class="title">' + listsitem[k].product[l].name + '</div>\n' +
+                '                        <div class="price-block">\n' +
+                '                            <div class="price1">' + listsitem[k].product[l].price1 + '</div>\n' +
+                '                            <div class="unit">' + listsitem[k].product[l].unit + '</div>\n' +
+                '                            <div class="price2">' + listsitem[k].product[l].price2 + listsitem[k].product[l].unit + '</div>\n' +
+                '                        </div>\n' +
+                '                        <div class="button">查看详情</div>\n' +
+                '                    </div>\n' +
+                '                </a>';
+            $("#listItem" + k).append(__listsitem);
+        }
+    }
+
+    $(".list-container .title-block .image").css("height", ($(window).width() + 500) * 9 / 32);
+
+    var stickyBar = $(".tab");
+    var stickyLine = $(".list-container").offset().top - 210;
+    var tab0 = $("#tab0");
+    var tab1 = $("#tab1");
+    var tab2 = $("#tab2");
+    var tab3 = $("#tab3");
+    var tab4 = $("#tab4");
+    var tabs = [tab0, tab1, tab2, tab3, tab4];
+    var list0 = $("#list0");
+    var list1 = $("#list1");
+    var list2 = $("#list2");
+    var list3 = $("#list3");
+    var list4 = $("#list4");
+    var lists = [list0, list1, list2, list3, list4];
+
+    function toggleSticky(e) {
+        window.scrollY > stickyLine ? stickyBar.addClass('sticky') : stickyBar.removeClass('sticky');
+        for (var m = 0; m < tabs.length; m++) {
+            if (window.scrollY > lists[m].offset().top - 210) {
+                for (var n = 0; n < tabs.length; n++) {
+                    tabs[n].removeClass('active')
+                }
+                tabs[m].addClass('active');
+                if (m > 2) {
+                    $(".tab").scrollLeft($(".tab")[0].scrollWidth)
+                } else {
+                    $(".tab").scrollLeft(0)
+                }
+            }
+        }
+    }
+
+    $(document).on('scroll', toggleSticky);
+    $(document).on('touchmove', toggleSticky);
+
+
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+
+        $('a[href^="#"]').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - 200}, 400);
+        });
+    });
+
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+    var headerInfoCompleteStatus = false;
+
+    function switchHeaderInfo() {
+        if (headerInfoCompleteStatus) {
+            $(".header-info").removeClass("complete");
+            headerInfoCompleteStatus = false;
+        } else {
+            $(".header-info").addClass("complete");
+            headerInfoCompleteStatus = true;
+        }
+    }
+
+
+    window.onload = function () {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    };
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+
+    // 小程序无时讯
+    // function toevent(e) {
+    //     wx.miniProgram.navigateTo({
+    //         url: '/pages/detailpages/planpage?planid=' + e.id
+    //     })
+    // }
+
+    function toproduct(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/productinfo?productid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>

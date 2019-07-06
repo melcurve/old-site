@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <title>Blue Elephant 蓝象餐厅</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module7.css?version=2019041501">
+    <link rel="stylesheet" href="css/init.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/fastclick.js"></script>
+</head>
+<style>
+    body:before {
+        content: ' ';
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000 url("image/2019BlueElephant/bg.jpg") no-repeat top;
+        background-size: contain;
+    }
+</style>
+
+<body ontouchstart="" onmouseover="" class="fixed">
+<div class="container">
+    <div class="header-info">
+        <img class="logo" src="image/2019BlueElephant/logo.png">
+        <div class="title">Blue Elephant 蓝象餐厅，传承泰国御膳房风味</div>
+        <div class="content">
+            Blue Elephant 蓝象餐厅，作为传统泰餐店的代表，荣获曼谷米其林餐盘推选。因其古朴的环境、味道的正宗，而广受泰国政商名流的欢迎，并且分店遍布欧洲各国。主厨 Nooror
+            在坚持传统的基础上，与时俱进，致力于成为泰国美食文化的宣传大使。<br><br>
+            蓝象目前在泰国拥有2家餐厅：曼谷旗舰店、和普吉分店。除了供应各式美食套餐外，还特设烹饪体验课程。因此你不仅能品尝到最地道的泰国风味，还能拥有最local 的美食体验。
+        </div>
+    </div>
+    <div class="tab">
+        <a href="#list1" class="tab1 item">预约订座</a>
+        <a href="#list2" class="tab2 item">美食套餐</a>
+        <a href="#list3" class="tab3 item">烹饪课程</a>
+    </div>
+    <div class="list-container">
+        <div id="list1">
+            <div class="title-block">
+                <div class="title">预约订座</div>
+                <div class="content">提前预约，免排队</div>
+            </div>
+            <div class="item-block type1"></div>
+        </div>
+        <div id="list2">
+            <div class="title-block">
+                <div class="title">美食套餐</div>
+                <div class="content">个性套餐，丰俭由人</div>
+            </div>
+            <div class="item-block type2"></div>
+        </div>
+        <div id="list3">
+            <div class="title-block">
+                <div class="title">烹饪课程</div>
+                <div class="content">跟当地老师逛菜市，和国际友人一起学做饭，这才是最独特的旅行体验</div>
+            </div>
+            <div class="item-block type3"></div>
+        </div>
+    </div>
+    <div class="blank-space">.</div>
+</div>
+
+
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    var list1item = [{
+        "title": "BlueElephant",
+        "subtitle": "曼谷店",
+        "link": "5768e7bcf7573726851e2fbb",
+        "image": "http://app.eatgreat.net/static/pic/shop/20171031/6bac3280-be29-11e7-92ef-06443731d693.jpg"
+    }, {
+        "title": "BlueElephant",
+        "subtitle": "普吉店",
+        "link": "5730744bf7573751e17edbca",
+        "image": "http://app.eatgreat.net/static/pic/shop/20171031/dd916888-be16-11e7-85fb-06443731d693.jpg"
+    }];
+    var list2item = [{
+        "name": "暹罗套餐",
+        "price1": "1455",
+        "price2": "1531",
+        "unit": "泰铢",
+        "link": "599b9dfaf757377c24e3e71d",
+        "image": "http://app.eatgreat.net/static/pic/product/20170822/dcda38d8-86e5-11e7-bac1-06443731d693.jpg"
+    }, {
+        "name": "皇家情人套餐",
+        "price1": "1846",
+        "price2": "1943",
+        "unit": "泰铢",
+        "link": "599bb255f757377c233466d5",
+        "image": "http://app.eatgreat.net/static/pic/product/20170823/652e81f2-87cd-11e7-a5c4-06443731d693.jpeg"
+    }, {
+        "name": "沙吞套餐",
+        "price1": "2070",
+        "price2": "2178",
+        "unit": "泰铢",
+        "link": "599bb650f757377c24e3e774",
+        "image": "http://app.eatgreat.net/static/pic/product/20180907/a4a45fa0-b283-11e8-91aa-06c003b736e8.jpeg"
+    }, {
+        "name": "老城套餐",
+        "price1": "3188",
+        "price2": "3355",
+        "unit": "泰铢",
+        "link": "599bc88af75737053f720c7b",
+        "image": "http://app.eatgreat.net/static/pic/product/20170822/3af4f836-86ff-11e7-a518-06443731d693.jpg"
+    }, {
+        "name": "经典套餐A",
+        "price1": "4732",
+        "price2": "4980",
+        "unit": "泰铢",
+        "link": "599bccddf7573706712f4cdf",
+        "image": "http://app.eatgreat.net/static/pic/product/20170823/6a54a9c6-87d3-11e7-b721-06443731d693.jpeg"
+    }, {
+        "name": "经典套餐B",
+        "price1": "4732",
+        "price2": "4980",
+        "unit": "泰铢",
+        "link": "599d2f47f7573722076698a1",
+        "image": "http://app.eatgreat.net/static/pic/product/20180907/90975f0c-b284-11e8-a6e5-06c003b736e8.jpeg"
+    }];
+    var list3item = [{
+        "name": "上午班/下午班",
+        "price1": "3131 ",
+        "price2": "3296 ",
+        "unit": "泰铢",
+        "link": "599bd3c7f7573706712f4cfb",
+        "image": "http://app.eatgreat.net/static/pic/product/20180907/01b8d462-b286-11e8-8989-06c003b736e8.jpeg"
+    }];
+
+    for (var i = 0; i < list1item.length; i++) {
+        var listItem1 = '<a id="' + list1item[i].link + '" href="legooorderapp://product/' + list1item[i].link + '" class="item" onclick="toshop(this)">\n' +
+            '                <img class="image" src="' + list1item[i].image + '">\n' +
+            '                <div class="info">\n' +
+            '                    <div class="title">' + list1item[i].title + '</div>\n' +
+            '                    <div class="subtitle">' + list1item[i].subtitle + '</div>\n' +
+            '                </div>\n' +
+            '            </div>';
+        $("#list1 .item-block").append(listItem1);
+    }
+
+    for (var j = 0; j < list2item.length; j++) {
+        var listItem2 = '<a id="' + list2item[j].link + '" href="legooorderapp://product/' + list2item[j].link + '" class="item" onclick="toproduct(this)">\n' +
+            '        <img class="image" src="' + list2item[j].image + '">\n' +
+            '        <div class="info">\n' +
+            '            <div class="name">' + list2item[j].name + '</div>\n' +
+            '            <div class="price-block">\n' +
+            '                <div class="price1">' + list2item[j].price1 + '</div>\n' +
+            '                <div class="unit">' + list2item[j].unit + '</div>\n' +
+            '                <div class="price2">' + list2item[j].price2 + list2item[j].unit + '</div>\n' +
+            '            </div>\n' +
+            '            <div class="button">查看详情</div>\n' +
+            '        </div>\n' +
+            '    </div>';
+        $("#list2 .item-block").append(listItem2);
+    }
+
+    for (var k = 0; k < list3item.length; k++) {
+        var listItem3 = '<a id="' + list3item[k].link + '" href="legooorderapp://product/' + list3item[k].link + '" class="item" onclick="toproduct(this)">\n' +
+            '        <img class="image" src="' + list3item[k].image + '">\n' +
+            '        <div class="info">\n' +
+            '            <div class="name">' + list3item[k].name + '</div>\n' +
+            '            <div class="price-block">\n' +
+            '                <div class="price1">' + list3item[k].price1 + '</div>\n' +
+            '                <div class="unit">' + list3item[k].unit + '</div>\n' +
+            '                <div class="price2">' + list3item[k].price2 + list3item[k].unit + '</div>\n' +
+            '            </div>\n' +
+            '            <div class="button">查看详情</div>\n' +
+            '        </div>\n' +
+            '    </div>';
+        $("#list3 .item-block").append(listItem3);
+    }
+
+    var stickyBar = $('.tab');
+    var stickyLine = stickyBar.offset().top;
+    var tab1 = $(".tab1");
+    var tab2 = $(".tab2");
+    var tab3 = $(".tab3");
+    var list1 = $("#list1").offset().top - 400;
+    var list2 = $("#list2").offset().top - 400;
+    var list3 = $("#list3").offset().top - 400;
+
+    function toggleSticky(e) {
+        window.scrollY > stickyLine ? stickyBar.addClass('sticky') : stickyBar.removeClass('sticky');
+        window.scrollY > list1 ? toggleActive(1) : false;
+        window.scrollY > list2 ? toggleActive(2) : false;
+        window.scrollY > list3 ? toggleActive(3) : false;
+    }
+
+    function toggleActive(int) {
+        tab1.removeClass('active');
+        tab2.removeClass('active');
+        tab3.removeClass('active');
+        switch (int) {
+            case 0:
+                tab1.removeClass('active');
+                tab2.removeClass('active');
+                tab3.removeClass('active');
+                break;
+            case 1:
+                tab1.addClass('active');
+                break;
+            case 2:
+                tab2.addClass('active');
+                break;
+            case 3:
+                tab3.addClass('active');
+                break;
+        }
+    }
+
+    $(document).on('scroll', toggleSticky);
+    $(document).on('touchmove', toggleSticky);
+
+    $("#list1 .item .image").css("height", ($(window).width()) * 9 / 32);
+    $("#list2 .item .image").css("height", ($(window).width() + 700) * 9 / 32);
+    $("#list3 .item .image").css("height", ($(window).width() + 500) * 9 / 32);
+
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+
+        $('.tab a[href^="#"]').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - 340}, 400);
+        });
+    });
+
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+
+    window.onload = function () {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    };
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+
+    // 小程序无时讯
+    // function toevent(e) {
+    //     wx.miniProgram.navigateTo({
+    //         url: '/pages/detailpages/planpage?planid=' + e.id
+    //     })
+    // }
+
+    function toproduct(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/productinfo?productid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>

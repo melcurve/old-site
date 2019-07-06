@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>大学暗恋了两年的学长，今天居然在微信上......</title>
+    <style type="text/css">
+        body, html, div, video {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            background: #000;
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: #fff;
+            text-align: center;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+
+        .cover > div {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            font-size: 20px;
+            color: #05082a;
+            font-weight: bold;
+            transform: translate(-50%, -50%);
+        }
+
+        .cover > div img {
+            width: 60%;
+            margin: 0 0 20px 0;
+        }
+
+        .cover > div img.large {
+            width: 80%;
+        }
+
+        .cover.hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .replay-button {
+            font-size: 16px;
+            font-weight: normal;
+            padding: 12px 12px;
+            margin: 20px 0 0 0;
+            color: #000;
+            border-radius: 6px;
+            border: solid #1a1a1a 1px;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        .replay-button.hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .replay-button:active {
+            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            pointer-events: auto;
+            transform: translateX(-50%);
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+
+        video.scaleWidth {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            pointer-events: auto;
+            transform: translateX(-50%);
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+
+        video.scaleHeight {
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            pointer-events: auto;
+            transform: translateX(-50%);
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+        }
+
+        video.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body ontouchstart="" onmouseover="">
+<div id="cover" class="cover">
+    <div>
+        <img id="loading_click" src="image/GreatMPTemp/great_video_loading.gif">
+        <div id="loading_text">努力加载中</div>
+        <div id="reflesh-button" onclick="reload()" class="replay-button hidden">如果长时间无法播放，请点我刷新</div>
+    </div>
+</div>
+<video id="video" webkit-playsinline="true" x5-video-player-type="h5" playsinline="true"
+       src="http://mv.eatgreat.cn/web/image/GreatMPTemp/great_video_20181001_01.mp4" type="video/mp4"
+       preload="auto"></video>
+<div id="QRCodeCover" class="cover hidden">
+    <div>
+        <img class="large" src="image/GreatMPTemp/great_video_qrcode.jpg">
+        <div>使用微信扫描或直接长按识别小程序</div>
+        <div onclick="reload()" class="replay-button">再看一次</div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    // if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+    //     window.applicationCache.update();
+    // }
+    $("#loading_click").click(function () {
+        $("#cover").addClass("hidden");
+        play();
+    });
+
+    var video = document.getElementById("video");
+    if ($(window).height() / $(window).width() > (16 / 9)) {
+        $("#video").addClass("scaleWidth");
+    } else {
+        $("#video").addClass("scaleHeight");
+    }
+    // var netWorkDelay = true;
+    // video.addEventListener("durationchange", function (ev) {
+    //     netWorkDelay = false;
+    //     setTimeout(function () {
+    //         $("#cover").addClass("hidden");
+    //     }, 1000)
+    // });
+
+    video.addEventListener("ended", function () {
+        setTimeout(function () {
+            $("#video").addClass("hidden");
+            setTimeout(function () {
+                $("#QRCodeCover").removeClass("hidden");
+            }, 1000);
+        }, 1000)
+    });
+
+    function reload() {
+        location.reload()
+    }
+
+    function play() {
+        document.getElementById("video").play();
+    }
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#loading_click").attr("src", "image/GreatMPTemp/great_video_click.png");
+            $("#loading_text").text("点击进入激情聊天")
+        }, 5000);
+        // setTimeout(function () {
+        //     if (netWorkDelay) {
+        //         $("#reflesh-button").removeClass("hidden");
+        //     } else {
+        //
+        //     }
+        // }, 10000)
+    })
+
+    // var req = new XMLHttpRequest();
+    // var src = "https://www.eatgreat.cn/web/image/GreatMPTemp/great_video_20181001_6.mp4";
+    // req.open('GET', src, true);
+    // req.responseType = 'blob';
+    // req.onload = function () {
+    //     if (this.status === 200) {
+    //         console.log(this);
+    //         var videoBlob = this.response;
+    //         var blobSrc = (window.URL || window.webkitURL || window || {}).createObjectURL(videoBlob);
+    //         $("#cover").addClass("hidden");
+    //         video.src = blobSrc;
+    //         console.log(blobSrc, 'blobSrc加载完毕');
+    //     } else {
+    //     }
+    // };
+    // req.onerror = function () {
+    //     location.reload();
+    // };
+    // req.send();
+    // // video.addEventListener("durationchange", function (ev) {
+    // //     if (ev.timeStamp !== 0) {
+    // //         $("#cover").addClass("hidden")
+    // //     }
+    // // });
+
+
+    // var xhrReq = new XMLHttpRequest();
+    // xhrReq.open('GET', 'http://mv.eatgreat.cn/web/image/GreatMPTemp/great_video_20181001_8.mp4', true);
+    //
+    // xhrReq.onload = function () {
+    //     // if (this.status === 200) {
+    //     //     var vid = URL.createObjectURL(this.response);
+    //     //     video.src = vid;
+    //     // }
+    //     video.src = URL.createObjectURL(r.response);
+    //     video.play();
+    // };
+    // if (video.canPlayType('video/mp4;codecs="avc1.42E01E, mp4a.40.2"')) {
+    //     xhrReq.open("GET", "http://mv.eatgreat.cn/web/image/GreatMPTemp/great_video_20181001_8.mp4");
+    // }
+    // else {
+    //     xhrReq.open("GET", "http://mv.eatgreat.cn/web/image/GreatMPTemp/great_video_20181001_8.mp4");
+    // }
+    // xhrReq.responseType = 'blob';
+    // // xhrReq.onerror = function () {
+    // //     console.log('err', arguments);
+    // // }
+    // xhrReq.onprogress = function (e) {
+    //     if (e.lengthComputable) {
+    //         var percentComplete = ((e.loaded / e.total) * 100 | 0) + '%';
+    //         console.log('progress: ', percentComplete);
+    //     }
+    // }
+    // xhrReq.send();
+</script>
+</body>
+</html>

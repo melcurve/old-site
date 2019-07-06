@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <title>2019毕业季</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module11.css?version=2019052302">
+    <link rel="stylesheet" href="css/init.css?version=01">
+    <script src="js/flexible.js"></script>
+    <script src="js/fastclick.js"></script>
+</head>
+<body ontouchstart="" onmouseover="" class="fixed">
+<div class="container">
+    <div class="tab"></div>
+    <img class="header-image" src="image/2019Graduate/index1.jpg">
+    <div class="swiper-pagination"></div>
+    <div class="pagination2">
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="list-container swiper-container">
+        <div class="swiper-wrapper"></div>
+    </div>
+    <div class="blank-space">.</div>
+</div>
+
+
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    var list1item = [{
+        name: "超好吃",
+        product: [{
+            "name": "すし家一柳",
+            "tag1": "银座前5寿司",
+            "tag2": "午餐12000日元起",
+            "reason": "Tabelog铜牌，高口碑寿司名店",
+            "link": "5a7587708c33e44f74a82138",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/cee7f762-0e3d-11e8-ae7d-06c003b736e8.jpg"
+        }, {
+            "name": "烧肉Ushigoro",
+            "tag1": "银牌烤肉店",
+            "tag2": "人均10000日元",
+            "reason": "出品优质Tabelog神级烤肉",
+            "link": "5ce267008c33e4244e1b0626",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190520/7b13ed1c-7ade-11e9-b90d-06c003b736e8.jpg"
+        }, {
+            "name": "焼鳥今井",
+            "tag1": "日本烧鸟百名店",
+            "tag2": "套餐4880日元起",
+            "reason": "东京烧鸟前10位实力派",
+            "link": "5cd24fcf8c33e40461f1e380",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/49659cda-7b96-11e9-8839-06c003b736e8.jpg"
+        }, {
+            "name": "魚政",
+            "tag1": "米其林推荐餐厅",
+            "tag2": "人均7000日元",
+            "reason": "东京排第三的绝品鳗鱼饭",
+            "link": "5a7528148c33e44f73c3e28b",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/db535a70-0e3b-11e8-86d0-06c003b736e8.jpg"
+        }, {
+            "name": "芝豆腐屋うかい",
+            "tag1": "人气餐厅",
+            "tag2": "午餐5600日元起",
+            "reason": "东京塔下绝美料亭",
+            "link": "57ac32faf757372193b924d1",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/b3ce53b4-7ba5-11e9-822c-06c003b736e8.jpg"
+        }, {
+            "name": "日山",
+            "tag1": "米其林一星寿喜烧",
+            "tag2": "人均8000日元",
+            "reason": "人形町著名的老字号寿喜烧",
+            "link": "578f2a28f757374c45a75f67",
+            "image": "http://app.eatgreat.net/static/pic/shop/20170928/716e14fe-a42a-11e7-92a0-06443731d693.jpg"
+        }, {
+            "name": "蟹工船",
+            "tag1": "银座吃蟹好去处",
+            "tag2": "套餐11000日元起",
+            "reason": "崭新的帝王蟹配山形牛大快朵颐套餐",
+            "link": "5c1c9f3f8c33e47c4ff0206e",
+            "image": "http://app.eatgreat.net/static/pic/shop/20181221/7bfaf264-04f7-11e9-98d1-06c003b736e8.jpg"
+        }]
+    }, {
+        name: "性价比",
+        product: [{
+            "name": "鰻割烹 伊豆栄 本店",
+            "tag1": "鳗鱼老字号",
+            "tag2": "套餐8600日元起",
+            "reason": "传统日式大宅中品鳗鱼盛宴",
+            "link": "5ce3bd938c33e4244e1b080e",
+            "image": "http://app.eatgreat.net/static/pic/shop/20181221/7bfaf264-04f7-11e9-98d1-06c003b736e8.jpg"
+        }, {
+            "name": "俺の焼肉",
+            "tag1": "实惠网红烤肉",
+            "tag2": "人均7000日元",
+            "reason": "日式烤肉初心者必打卡尽享优质和牛",
+            "link": "5b8640538c33e4256fb2a752",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/d39055ec-ab7d-11e8-ad71-06c003b736e8.jpg"
+        }, {
+            "name": "築地青空三代目",
+            "tag1": "本地人气寿司店",
+            "tag2": "套餐7000日元起",
+            "reason": "席位稀少，可提供单点的极上江户前",
+            "link": "5b86790e8c33e425701cca71",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/03b68aa2-ab7e-11e8-ad71-06c003b736e8.jpg"
+        }, {
+            "name": "鮨國",
+            "tag1": "筑底网红海胆",
+            "tag2": "人均3500日元起",
+            "reason": "大口享受优质新鲜海胆带来的舌尖高潮",
+            "link": "5b867f118c33e425701cca9d",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/4a05a574-ab7e-11e8-a90b-06c003b736e8.jpg"
+        }]
+    }, {
+        name: "私藏馆子",
+        product: [{
+            "name": "浅草じゅうろく",
+            "tag1": "日本荞麦百名店",
+            "tag2": "人均3500日元起",
+            "reason": "浅草得分最高餐厅，美女主厨魅力惊人",
+            "link": "5ce3c11d8c33e4244f166b28",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/b7a95a4e-7ba8-11e9-b90d-06c003b736e8.jpg"
+        }, {
+            "name": "響",
+            "tag1": "人气夜景餐厅",
+            "tag2": "人均4300日元起",
+            "reason": "无限畅饮加极品牛肉大集合",
+            "link": "5ce3c26b8c33e4244e1b0821",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/7bb11134-7ba9-11e9-8a30-06c003b736e8.jpg"
+        }, {
+            "name": "誠",
+            "tag1": "巷子里的极品牛扒",
+            "tag2": "人均20000日元起",
+            "reason": "老夫妻经营的细腻温情洋风扒房",
+            "link": "5ce3c4438c33e4244f166b33",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/82c242da-7baa-11e9-b90d-06c003b736e8.jpg"
+        }, {
+            "name": "JANICE WONG DESSERT BAR",
+            "tag1": "华人女主厨",
+            "tag2": "人均4000日元起",
+            "reason": "新宿甜品名店，独特三道式甜品",
+            "link": "5ce3c5558c33e4244e1b082a",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190521/25ab770a-7bab-11e9-9f65-06c003b736e8.jpg"
+        }]
+    }];
+    var list2item = [{
+        name: "超好吃",
+        product: [{
+            "name": "まさる",
+            "tag1": "大阪TOP5寿司",
+            "tag2": "人均15000日元",
+            "reason": "预约困难店，小众极品江户前",
+            "link": "59af7973f757370e5ce9935a",
+            "image": "http://app.eatgreat.net/static/pic/shop/20170928/085d3ade-a426-11e7-b814-06443731d693.jpg"
+        }, {
+            "name": "Fujiya1935",
+            "tag1": "米其林二星创意怀石",
+            "tag2": "午餐10000日元",
+            "reason": "和静清寂的优美环境，一品细腻创意怀石",
+            "link": "57c6c0ebf75737510313df07",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180327/2736763a-319f-11e8-b1b8-06c003b736e8.jpg"
+        }, {
+            "name": "La Cime",
+            "tag1": "米其林二星法餐",
+            "tag2": "午餐8500日元",
+            "reason": "宫崎骏的选择，大阪法餐顶峰",
+            "link": "57c53014f75737510313db25",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/c7f72c96-0e49-11e8-8206-06c003b736e8.jpg"
+        }, {
+            "name": "北新地 福多亭",
+            "tag1": "米其林一星铁板烧",
+            "tag2": "午餐12000日元起",
+            "reason": "肉质鲜嫩多汁，舌头都要吞掉的美味",
+            "link": "5a790f808c33e40742f51683",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/3c31726e-0e41-11e8-86d0-06c003b736e8.jpg"
+        }, {
+            "name": "北むら",
+            "tag1": "米其林一星寿喜烧",
+            "tag2": "人均10000日元",
+            "reason": "大阪最具人气老牌寿喜烧",
+            "link": "5ce3d95c8c33e4244e1b083d",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190522/c2fbc078-7c64-11e9-a63d-06c003b736e8.jpg"
+        }, {
+            "name": "本家柴藤",
+            "tag1": "有口皆碑的鳗鱼饭",
+            "tag2": "人均5000日元",
+            "reason": "常年出现在各大攻略上的人气鳗鱼饭店",
+            "link": "5b84fe688c33e40cae79dcbe",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180828/1290865a-aaa1-11e8-b6d7-06c003b736e8.jpg"
+        }]
+    }, {
+        name: "性价比",
+        product: [{
+            "name": "老松 喜多川",
+            "tag1": "怀石料理名店",
+            "tag2": "午餐8000日元",
+            "reason": "米其林一星老字号知名料亭",
+            "link": "5a79505d8c33e40743030f3c",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/5215c804-0e42-11e8-b07a-06c003b736e8.jpg"
+        }, {
+            "name": "与太呂本店",
+            "tag1": "米其林一星天妇罗",
+            "tag2": "午餐2500日元起",
+            "reason": "性价比无敌炸物打卡",
+            "link": "5ce3ddd28c33e4244f166b53",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190522/f0fc1694-7c64-11e9-822c-06c003b736e8.jpg"
+        }, {
+            "name": "万両",
+            "tag1": "大阪烤肉TOP1",
+            "tag2": "人均5000日元",
+            "reason": "性价比突破天际的优质和牛烤肉",
+            "link": "5ce4bdcd8c33e4244f166d75",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190522/581a3018-7c65-11e9-822c-06c003b736e8.jpg"
+        }, {
+            "name": "長樂",
+            "tag1": "星级关东煮",
+            "tag2": "人均800人民币",
+            "reason": "米其林青睐的关东煮会席料亭",
+            "link": "59f0639cf757373d07bb73c5",
+            "image": "http://app.eatgreat.net/static/pic/shop/20171103/bef3dd08-c063-11e7-b945-06443731d693.jpg"
+        }]
+    }, {
+        name: "私藏馆子",
+        product: [{
+            "name": "雲鶴",
+            "tag1": "新晋割烹0",
+            "tag2": "午餐5000日元起",
+            "reason": "大阪城旁新晋米其林割烹新星",
+            "link": "59b0af05f757370e5ce995d6",
+            "image": "http://app.eatgreat.net/static/pic/shop/20170928/2fdef48e-a422-11e7-aeb4-06443731d693.jpg"
+        }, {
+            "name": "莉玖",
+            "tag1": "静谧迷人怀石",
+            "tag2": "午餐4000日元起",
+            "reason": "环境雅致，静心品尝精美怀石",
+            "link": "57c68b6bf75737510313ddb8",
+            "image": "http://app.eatgreat.net/static/pic/product/20190403/5fa84538-55f3-11e9-8c97-06c003b736e8.jpeg"
+        }, {
+            "name": "浪速割烹 喜川",
+            "tag1": "Tabelog铜牌割烹",
+            "tag2": "人均12000日元",
+            "reason": "名料理人主理充满个性的日料亭",
+            "link": "57c52e82f75737510418edac",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190522/87cadbc8-7c65-11e9-822c-06c003b736e8.jpg"
+        }, {
+            "name": "寿し芳",
+            "tag1": "米其林二星寿司",
+            "tag2": "人均20000日元",
+            "reason": "主打创新江户前的星级寿司名店",
+            "link": "5ce4e3988c33e4244e1b0ade",
+            "image": "http://app.eatgreat.net/static/pic/shop/20190522/aff70806-7c65-11e9-a63d-06c003b736e8.jpg"
+        }]
+    }];
+    var list3item = [{
+        name: "超好吃",
+        product: [{
+            "name": "木山",
+            "tag1": "Tabelog银牌餐厅",
+            "tag2": "午餐套餐10000日元",
+            "reason": "最高的出汁，京都纯正井水京料理",
+            "link": "5a7a93ce8c33e40743031151",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/89c0b588-0e43-11e8-8206-06c003b736e8.jpg"
+        }, {
+            "name": "緒方",
+            "tag1": "京都最高分的怀石料亭",
+            "tag2": "人均50000日元",
+            "reason": "传统茶怀石，京都料亭的顶点",
+            "link": "5a7bc5f28c33e42737a7a51d",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180329/c6569f74-332f-11e8-9176-06c003b736e8.jpg"
+        }, {
+            "name": "鮨 和魂",
+            "tag1": "米其林一星寿司",
+            "tag2": "人均20000日元",
+            "reason": "环境高大上，近距离欣赏职人表演",
+            "link": "5a7aa1e38c33e40742f51998",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/c7f72c96-0e49-11e8-8206-06c003b736e8.jpg"
+        }, {
+            "name": "木乃婦",
+            "tag1": "星级怀石老店",
+            "tag2": "人均20000日元",
+            "reason": "大厨对日本料理有自己独到的见解",
+            "link": "59f9454cf75737049af30f61",
+            "image": "http://app.eatgreat.net/static/pic/shop/20171104/55dac860-c142-11e7-b21c-06443731d693.jpg"
+        }, {
+            "name": "天麩羅 水暉",
+            "tag1": "星级天妇罗",
+            "tag2": "人均10000日元",
+            "reason": "丽思卡尔顿倾力打造，午餐可享庭院风光",
+            "link": "5ab373378c33e461fefd22fd",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180327/ae52d504-31a0-11e8-b602-06c003b736e8.jpg"
+        }, {
+            "name": "祇園 なん波",
+            "tag1": "京都老字号京料理",
+            "tag2": "午餐8000日元起",
+            "reason": "多年获得米其林一星称号，不踩雷料亭",
+            "link": "5a7ad8f18c33e40742f51add",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/6ae6447e-0e44-11e8-ae7d-06c003b736e8.jpg"
+        }]
+    }, {
+        name: "性价比",
+        product: [{
+            "name": "二條 葵月",
+            "tag1": "性价比割烹料亭",
+            "tag2": "午餐4000日元起",
+            "reason": "米其林推荐口碑餐厅，菜式多样创新",
+            "link": "5a7d00e48c33e433a97d965b",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/7dc9bab4-0e47-11e8-86d0-06c003b736e8.jpg"
+        }, {
+            "name": "十二段家 本店",
+            "tag1": "人气寿喜烧",
+            "tag2": "人均10000日元",
+            "reason": "京都老字号金牌，极受本地人欢迎",
+            "link": "5b860ab48c33e4256fb2a66b",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/db5ea3a0-ab3c-11e8-8528-06c003b736e8.jpg"
+        }, {
+            "name": "京の焼肉処 弘",
+            "tag1": "人气烤肉连锁",
+            "tag2": "人均5000日元",
+            "reason": "京都名气极高的连锁和牛烤肉专门店",
+            "link": "5b8524d48c33e40cad8322fa",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/6dc21bd8-ab3c-11e8-8528-06c003b736e8.jpg"
+        }, {
+            "name": "祇をん う桶や う",
+            "tag1": "米其林推荐鳗鱼饭",
+            "tag2": "人均4000日元",
+            "reason": "京都老字号，预约困难店",
+            "link": "5b8605228c33e4256fb2a64f",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/ca0b4a22-ab3c-11e8-9271-06c003b736e8.jpg"
+        }]
+    }, {
+        name: "私藏馆子",
+        product: [{
+            "name": "下鴨茶寮",
+            "tag1": "老字号京料理",
+            "tag2": "午餐5000日元起",
+            "reason": "体验古色古香京都风情",
+            "link": "5b43128c8c33e445f3704236",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180709/f401717e-834d-11e8-b122-06c003b736e8.jpg"
+        }, {
+            "name": "嵐山よしむら",
+            "tag1": "米其林推荐餐厅",
+            "tag2": "午餐3000日元起",
+            "reason": "可以品尝到美味的荞麦与天妇罗",
+            "link": "5b85359a8c33e40cad83234c",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180829/b1d745a0-ab3c-11e8-a405-06c003b736e8.jpg"
+        }, {
+            "name": "岡崎 つるや",
+            "tag1": "一星老字号",
+            "tag2": "人均12000日元",
+            "reason": "环境无敌，文人墨客挚爱传统日式庭院",
+            "link": "59f96552f7573704998793b5",
+            "image": "http://app.eatgreat.net/static/pic/shop/20171104/38167198-c143-11e7-b21c-06443731d693.jpg"
+        }, {
+            "name": "嘗",
+            "tag1": "米其林推荐居酒屋",
+            "tag2": "人均3000日元",
+            "reason": "米其林推荐居酒屋",
+            "link": "5a7c26098c33e427386729fd",
+            "image": "http://app.eatgreat.net/static/pic/shop/20180210/d536fb1a-0e45-11e8-86d0-06c003b736e8.jpg"
+        }]
+    }];
+
+    var listsitem = [list1item, list2item, list3item];
+
+    for (var k = 0; k < listsitem.length; k++) {
+        var _listsitem = '<div id="swiperSlide' + k + '" class="swiper-slide"></div>';
+        $('.swiper-wrapper').append(_listsitem);
+        for (var l = 0; l < listsitem[k].length; l++) {
+            var __listitem = '<div id="cateBlock' + l + '" class="cate-block">\n' +
+                '            <div class="cate-title">' + listsitem[k][l].name + '</div>\n' +
+                '            <div id="cateBlockItem' + k + l + '" class="cate-block-item"></div>\n' +
+                '</div>';
+            $('#swiperSlide' + k).append(__listitem);
+            for (var m = 0; m < listsitem[k][l].product.length; m++) {
+                var ___listitem = '<a id="' + listsitem[k][l].product[m].link + '" href="legooorderapp://shop/' + listsitem[k][l].product[m].link + '" class="item" onclick="toshop(this)">\n' +
+                    '                    <img class="image" src="' + listsitem[k][l].product[m].image + '">\n' +
+                    '                    <div class="info">\n' +
+                    '                        <span class="title">' + listsitem[k][l].product[m].name + '</span>\n' +
+                    '                        <div class="tag1">' + listsitem[k][l].product[m].tag1 + '</div>\n' +
+                    '                        <div class="tag2">' + listsitem[k][l].product[m].tag2 + '</div>\n' +
+                    '                        <div class="reason">' + listsitem[k][l].product[m].reason + '</div>\n' +
+                    '                        <div class="button">查看详情</div>\n' +
+                    '                    </div>\n' +
+                    '                </a>';
+                $('#cateBlockItem' + k + l).append(___listitem);
+            }
+        }
+    }
+
+    for (var a = 0; a < $(".list-container .item").length; a++) {
+        var randomNum = Math.ceil(Math.random() * 10);
+        if (0 < randomNum && randomNum < 3) {
+            $(".list-container .item:eq(" + a + ")").find(".image").css("height", ($(window).width()) * 9 / 32);
+        } else if (3 < randomNum && randomNum < 5) {
+            $(".list-container .item:eq(" + a + ")").find(".image").css("height", ($(window).width() + 200) * 9 / 32);
+        } else if (5 < randomNum && randomNum < 8) {
+            $(".list-container .item:eq(" + a + ")").find(".image").css("height", ($(window).width() + 480) * 9 / 32);
+        } else {
+            $(".list-container .item:eq(" + a + ")").find(".image").css("height", ($(window).width() + 700) * 9 / 32);
+        }
+    }
+
+    var stickyBar = $(".swiper-pagination");
+    var stickyLine = $(".list-container").offset().top;
+    // var tab0 = $("#tab0");
+    // var tab1 = $("#tab1");
+    // var tab2 = $("#tab2");
+    // var tab3 = $("#tab3");
+    // var tab4 = $("#tab4");
+    // var tabs = [tab0, tab1, tab2, tab3];
+    // var list0 = $("#list0");
+    // var list1 = $("#list1");
+    // var list2 = $("#list2");
+    // var list3 = $("#list3");
+    // var list4 = $("#list4");
+    // var lists = [list0, list1, list2, list3];
+
+    function toggleSticky(e) {
+        window.scrollY > stickyLine ? stickyBar.addClass('sticky') : stickyBar.removeClass('sticky');
+        // for (var m = 0; m < tabs.length; m++) {
+        //     if (window.scrollY > lists[m].offset().top - 210) {
+        //         for (var n = 0; n < tabs.length; n++) {
+        //             tabs[n].removeClass('active')
+        //         }
+        //         tabs[m].addClass('active');
+        //         if (m > 2) {
+        //             $(".tab").scrollLeft($(".tab")[0].scrollWidth)
+        //         } else {
+        //             $(".tab").scrollLeft(0)
+        //         }
+        //     }
+        // }
+    }
+
+    $(document).on('scroll', toggleSticky);
+    $(document).on('touchmove', toggleSticky);
+
+
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+
+        $('a[href^="#"]').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: $(this.hash).offset().top - 200}, 400);
+        });
+    });
+
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+    $(document).ready(function () {
+        var Swiper1 = new Swiper('.list-container', {
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'custom-pagination',
+                renderBullet: function (index, className) {
+                    switch (index) {
+                        case 0:
+                            text = '东京';
+                            break;
+                        case 1:
+                            text = '大阪';
+                            break;
+                        case 2:
+                            text = '京都';
+                            break;
+                    }
+                    return '<span class="' + className + '">' + text + '</span>'
+                }
+            },
+            autoHeight: true
+        });
+    });
+
+    window.onload = function () {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    };
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+
+    // 小程序无时讯
+    // function toevent(e) {
+    //     wx.miniProgram.navigateTo({
+    //         url: '/pages/detailpages/planpage?planid=' + e.id
+    //     })
+    // }
+
+    function toproduct(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/productinfo?productid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>

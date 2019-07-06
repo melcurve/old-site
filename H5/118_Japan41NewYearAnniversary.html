@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover,user-scalable=no">
+    <title>日本新年号令和的正确打开方式</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module5.css?version=2019040103">
+    <link rel="stylesheet" href="css/init.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/fastclick.js"></script>
+    <!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+</head>
+<style>
+    body, html {
+        background: #ffdf5a;
+    }
+</style>
+<body ontouchstart="" onmouseover="" class="fixed">
+<div class="enter-anim">
+    <div class="anim-main">
+        <img class="enter1" src="image/Japan41NewYearAnniversary/img_enter1.jpg">
+        <img class="enter2" src="image/Japan41NewYearAnniversary/img_enter2.jpg">
+    </div>
+    <div class="enter-cover"></div>
+</div>
+<div class="container">
+    <div class="header">
+        <img class="index-image" src="image/Japan41NewYearAnniversary/index1.jpg">
+        <img class="btn1" src="image/Japan41NewYearAnniversary/svg_header_btn1.svg" onclick="showAlert(0,1)">
+        <img class="btn2" src="image/Japan41NewYearAnniversary/svg_header_btn2.svg" onclick="showAlert(0,2)">
+    </div>
+    <div class="content">
+        <img class="content-title" src="image/Japan41NewYearAnniversary/svg_content_title.svg">
+        <div class="city-block">
+            <img class="city city1" src="image/Japan41NewYearAnniversary/1.png" onclick="showAlert(1,1)">
+            <img class="city city2" src="image/Japan41NewYearAnniversary/2.png" onclick="showAlert(1,2)">
+            <img class="city city3" src="image/Japan41NewYearAnniversary/3.png" onclick="showAlert(1,3)">
+            <img class="city city4" src="image/Japan41NewYearAnniversary/4.png" onclick="showAlert(1,4)">
+            <img class="city city5" src="image/Japan41NewYearAnniversary/5.png" onclick="showAlert(1,5)">
+            <img class="city city6" src="image/Japan41NewYearAnniversary/6.png" onclick="showAlert(1,6)">
+            <img class="city city7" src="image/Japan41NewYearAnniversary/7.png" onclick="showAlert(1,7)">
+            <img class="city city8" src="image/Japan41NewYearAnniversary/8.png" onclick="showAlert(1,8)">
+            <img class="city city9" src="image/Japan41NewYearAnniversary/9.png" onclick="showAlert(1,9)">
+            <img class="city city10" src="image/Japan41NewYearAnniversary/10.png" onclick="showAlert(1,10)">
+            <img class="city city11" src="image/Japan41NewYearAnniversary/11.png" onclick="toTop()">
+        </div>
+    </div>
+    <div class="extra-container">
+        <img class="content-title" style="margin-bottom: 0.85rem"
+             src="image/Japan41NewYearAnniversary/svg_content_title2.svg">
+        <div id="extraList1Root" class="extra-alert-root"></div>
+        <img class="content-title" style="margin: 0.7rem" src="image/Japan41NewYearAnniversary/svg_content_title3.svg">
+        <div id="extraList2Root" class="extra-alert-root"></div>
+    </div>
+    <img class="bottom-info" src="image/Japan41NewYearAnniversary/img_bottom_info.jpg">
+    <div class="to-top-btn" onclick="toTop()">回到顶部</div>
+
+    <div class="blank-space">.</div>
+</div>
+<div class="black-cover alert" onclick="hideEveryThing()"></div>
+<div class="alert-container header-btn1-alert alert">
+    <div class="main">
+        <div class="title">年号小知识</div>
+        <div class="content">
+            在日本，同时使用着两种年号。除了全球通用的公元年号，还有日本独有的年号。日本年号的使用借鉴自中国古籍，其最早的年号出现在7世纪。日本年号的每一个字的选择都非常考究，极其慎重。根据日本1979年颁布的《元号法》，如果天皇退位，年号也必须改变。按照日本政府规定的年号选定程序，日本首相需要钦点数名精通中国史、中国古典文学和日本古典文学等领域的学者，让他们提出两到五个新年号作为候选方案。新年号只能两个汉字，每个字必须易读，且在历史上的年号中没有使用过。备选方案在经过参众两院的商量，最后由内阁会议决定“胜出”方案。<br>
+            平成（日文平假名：へいせい）是日本第125代天皇明仁的年号，日本国昭和64年（1989年）1月7日清晨，日本第124代天皇裕仁驾崩，享年88岁，55岁的皇太子明仁登基，于次日起改元”平成“，这标志着平成时代的开始，并沿用至今。平成出自于中国古代历史家司马迁的著作《史记》中“内平外成”和《尚书》中“地平天成”一词。充满了“希望国内外、天地间（宇宙、世界）和平”的意义。
+        </div>
+    </div>
+    <div class="close-btn" onclick="hideEveryThing()">关闭</div>
+</div>
+<div class="alert-container header-btn2-alert alert">
+    <div class="main">
+        <div class="title">关于令和你必须要知道的事</div>
+        <div class="content">
+            新年号“令和”出自日本古诗集《万叶集》，取“于时初春令月，气淑风和”的意思。过往年号都是出自中国古籍，“令和”是日本第一个来源于本国典籍的年号。日本现在的“平成”年号将于4月30日随着明仁天皇退位停止使用，59岁的皇太子德仁将于次日（5月1日）即位，当日零时开始正式启用新年号。
+            需要注意的是，<span class="hightlight">由4月27日起至5月6日，日本将会迎来黄金10连休。</span>其中与5月1/2/3/4与我们的劳动节小长假重叠，五一出行日本必须要注意<span
+                class="hightlight">及早预定以及完美避开人流！</span>请迅速接收下方提供的出行推荐，助力完美玩转令和。
+        </div>
+    </div>
+    <div class="close-btn" onclick="hideEveryThing()">关闭</div>
+</div>
+
+<div id="cityAlertRoot"></div>
+<div id="extraListAlertRoot"></div>
+
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+        setTimeout(function () {
+            if (location.href.indexOf("#reloaded") == -1) {
+                location.href = location.href + "#reloaded";
+                location.reload();
+            }
+        }, 1000);
+        setTimeout(function () {
+            $("body").removeClass("fixed");
+        }, 6000)
+    });
+
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+    function hideEveryThing() {
+        $(".alert").removeClass("show");
+        $(".container").removeClass("scale");
+        // $("body").removeClass("fixed");
+    }
+
+    function showAlert(type, index) {
+        $(".black-cover").addClass("show");
+        $(".container").addClass("scale");
+        // $("body").addClass("fixed");
+        if (type === 0) {
+            $(".header-btn" + index + "-alert").addClass("show");
+        } else if (type === 1) {
+            $(".city" + (index - 1) + "-alert").addClass("show");
+        } else if (type === 2) {
+            $(".extra1" + index + "-alert").addClass("show");
+        } else if (type === 3) {
+            $(".extra2" + index + "-alert").addClass("show");
+        }
+    }
+
+    function toTop() {
+        $("html,body").animate({scrollTop: 0}, 500);
+    }
+
+    var swiperList1 = {
+        name: "东京",
+        shop: [
+            {
+                "name": "芝豆腐屋うかい",
+                "tag": "超人气会席料理",
+                "reason": "东京塔下风情满载豆腐屋",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/d64a1354-c12c-11e7-94a7-06443731d693.jpg",
+                "link": "57ac32faf757372193b924d1"
+            },
+            {
+                "name": "乃木坂しん",
+                "tag": "米其林一星怀石",
+                "reason": "ANA全日空头等舱指定餐饮",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180930/580cd622-c462-11e8-9f63-06c003b736e8.jpg",
+                "link": "59e86e87f75737731eddfc6e"
+            },
+            {
+                "name": "銀座久兵衛",
+                "tag": "老牌寿司",
+                "reason": "培养出无数职人的老字号寿司",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/1b260a38-a430-11e7-b814-06443731d693.jpg",
+                "link": "5786e3fbf7573760de505dbb"
+            },
+            {
+                "name": "魚政",
+                "tag": "米其林推荐餐厅",
+                "reason": "东京排第三的绝品鳗鱼饭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/db535a70-0e3b-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a7528148c33e44f73c3e28b"
+            },
+            {
+                "name": "焼肉うしごろ(銀座店)",
+                "tag": "人气餐厅",
+                "reason": "Tabelog银牌高分烤肉",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/23d1cbca-c147-11e7-a8a8-06443731d693.jpg",
+                "link": "578c9b8cf757374c4493cd91"
+            },
+            {
+                "name": "帰燕",
+                "tag": "米其林一星割烹",
+                "reason": "本地口碑超好的板前割烹",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/7981b3ee-c12b-11e7-94a7-06443731d693.jpg",
+                "link": "59f7e194f75737049af30a77"
+            },
+            {
+                "name": "Lature",
+                "tag": "米其林一星法餐",
+                "reason": "东京为人熟知的野味法餐王者",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180328/7705aadc-322b-11e8-9994-06c003b736e8.jpg",
+                "link": "5ab8982b8c33e431eafa5bae"
+            },
+            {
+                "name": "山田屋 丸之内店",
+                "tag": "人气河豚料理",
+                "reason": "米其林三星山田屋最新分店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180328/25fba6fe-322c-11e8-9bcd-06c003b736e8.jpg",
+                "link": "5ab463658c33e461fda44c1f"
+            },
+            {
+                "name": "日山",
+                "tag": "米其林一星",
+                "reason": "人形町著名的老字号寿喜烧",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/716e14fe-a42a-11e7-92a0-06443731d693.jpg",
+                "link": "578f2a28f757374c45a75f67"
+            },
+            {
+                "name": "醍醐",
+                "tag": "米其林二星斋菜",
+                "reason": "庭院深深的实力派精进料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/ceeaecd8-a42a-11e7-92a0-06443731d693.jpg",
+                "link": "57986e65f757371c63736b53"
+            }
+        ]
+    };
+    var swiperList2 = {
+        name: "大阪",
+        shop: [
+            {
+                "name": "老松喜多川",
+                "tag": "米其林一星怀石",
+                "reason": "屹立不倒的高口碑名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/5215c804-0e42-11e8-b07a-06c003b736e8.jpg",
+                "link": "5a79505d8c33e40743030f3c"
+            },
+            {
+                "name": "まさる",
+                "tag": "人气寿司店",
+                "reason": "大阪TOP5小众私藏寿司",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/085d3ade-a426-11e7-b814-06443731d693.jpg",
+                "link": "59af7973f757370e5ce9935a"
+            },
+            {
+                "name": "La Cime",
+                "tag": "米其林二星法餐",
+                "reason": "大阪最高星级现代法餐顶点存在",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/c7f72c96-0e49-11e8-8206-06c003b736e8.jpg",
+                "link": "57c53014f75737510313db25"
+            },
+            {
+                "name": "Fujiya 1935",
+                "tag": "米其林二星怀石",
+                "reason": "创意怀石，每一道菜都是艺术品",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/2736763a-319f-11e8-b1b8-06c003b736e8.jpg",
+                "link": "57c6c0ebf75737510313df07"
+            },
+            {
+                "name": "雲鶴",
+                "tag": "米其林一星怀石",
+                "reason": "新晋大阪高分怀石料亭，",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/2fdef48e-a422-11e7-aeb4-06443731d693.jpg",
+                "link": "59b0af05f757370e5ce995d6"
+            },
+            {
+                "name": "松阪牛焼肉 M",
+                "tag": "本地人气烤肉",
+                "reason": "大阪网红性价比烤肉专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180828/121cba28-aaa0-11e8-912c-06c003b736e8.jpg",
+                "link": "5b84b93c8c33e40cae79dba5"
+            },
+            {
+                "name": "いし井",
+                "tag": "米其林一星烧鸟",
+                "reason": "地狱级预约困难大阪烧鸟名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/cd5f5cec-c05d-11e7-b21c-06443731d693.jpg",
+                "link": "57c52568f75737510313daf7"
+            },
+            {
+                "name": "串かつ凡",
+                "tag": "米其林一星炸串",
+                "reason": "大阪必吃的顶尖炸串，一串入魂",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/ded46bcc-c04c-11e7-a158-06443731d693.jpg",
+                "link": "57c68089f75737510313dd3a"
+            },
+            {
+                "name": "はり重（道顿堀本店）",
+                "tag": "网红寿喜烧",
+                "reason": "大阪本地人爱去的寿喜烧名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180731/c182a5ce-94aa-11e8-a6cc-06c003b736e8.jpg",
+                "link": "5b602a388c33e4470d8b8e05"
+            },
+            {
+                "name": "本家柴藤",
+                "tag": "知名鳗鱼饭",
+                "reason": "大阪高人气鳗鱼世家出品，值得品尝",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180828/1290865a-aaa1-11e8-b6d7-06c003b736e8.jpg",
+                "link": "5b84fe688c33e40cae79dcbe"
+            }
+        ]
+    };
+    var swiperList3 = {
+        name: "京都",
+        shop: [
+            {
+                "name": "木山",
+                "tag": "米其林一星怀石",
+                "reason": "私藏隐世料亭，自家井水秘制高汤",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/89c0b588-0e43-11e8-8206-06c003b736e8.jpg",
+                "link": "5a7a93ce8c33e40743031151"
+            },
+            {
+                "name": "二條 葵月",
+                "tag": "米其林推荐割烹",
+                "reason": "性价比一流的小众割烹料亭，京都必吃",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/7dc9bab4-0e47-11e8-86d0-06c003b736e8.jpg",
+                "link": "5a7d00e48c33e433a97d965b"
+            },
+            {
+                "name": "天麩羅 水暉",
+                "tag": "米其林一星天妇罗",
+                "reason": "鸭川河畔，环境优雅的美味天妇罗盛宴",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/ae52d504-31a0-11e8-b602-06c003b736e8.jpg",
+                "link": "5ab373378c33e461fefd22fd"
+            },
+            {
+                "name": "下鴨茶寮",
+                "tag": "老字号料亭",
+                "reason": "京都古风情十足的纯正日料体验",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180709/f401717e-834d-11e8-b122-06c003b736e8.jpg",
+                "link": "5b43128c8c33e445f3704236"
+            },
+            {
+                "name": "祇をん う桶や う",
+                "tag": "米其林一星鳗鱼饭",
+                "reason": "京都最具特色桶装鳗鱼饭，经常大排长龙",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/ca0b4a22-ab3c-11e8-9271-06c003b736e8.jpg",
+                "link": "5b8605228c33e4256fb2a64f"
+            },
+            {
+                "name": "十二段家",
+                "tag": "本地人气寿喜烧",
+                "reason": "老字号寿喜烧专门店，本地人认可的美味",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/db5ea3a0-ab3c-11e8-8528-06c003b736e8.jpg",
+                "link": "5b860ab48c33e4256fb2a66b"
+            },
+            {
+                "name": "京の焼肉 弘",
+                "tag": "网红烤肉店",
+                "reason": "京都连锁网红烤肉，高品质超强性价比",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180829/5a951eac-ab3c-11e8-8528-06c003b736e8.jpg",
+                "link": "5b85232f8c33e40cad8322e9"
+            },
+            {
+                "name": "よねむら",
+                "tag": "米其林一星法餐",
+                "reason": "洋食与和食的碰撞，出人意料的创意法餐",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/8ba563ac-0e44-11e8-93b2-06c003b736e8.jpg",
+                "link": "5a7ae2d38c33e40742f51aff"
+            },
+            {
+                "name": "鮨 和魂",
+                "tag": "米其林一星",
+                "reason": "京都位数不多的极品寿司店，实力强进",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/d58a3f02-0e43-11e8-b07a-06c003b736e8.jpg",
+                "link": "5a7aa1e38c33e40742f51998"
+            },
+            {
+                "name": "嘗",
+                "tag": "米其林推荐居酒屋",
+                "reason": "人气极旺的小众居酒屋，非老饕不识",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/d536fb1a-0e45-11e8-86d0-06c003b736e8.jpg`",
+                "link": "5a7c26098c33e427386729fd"
+            }
+        ]
+    };
+    var swiperList4 = {
+        name: "奈良",
+        shop: [
+            {
+                "name": "和山村",
+                "tag": "米其林三星",
+                "reason": "全日本性价比最高的三星怀石料亭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/a68ace76-a12b-11e8-9437-06c003b736e8.jpg",
+                "link": "5b6d47758c33e4104e02d792"
+            },
+            {
+                "name": "花墻",
+                "tag": "米其林二星",
+                "reason": "每日限定，完全预约制庭院餐厅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/7cc9ef0c-a128-11e8-9437-06c003b736e8.jpg",
+                "link": "5b6bbeaa8c33e4104d992a0f"
+            },
+            {
+                "name": "秋篠の森 なず菜",
+                "tag": "米其林一星",
+                "reason": "私藏小众创意料理餐馆",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/7906ead6-a129-11e8-b207-06c003b736e8.jpg",
+                "link": "5b6c239c8c33e4104e02d455"
+            },
+            {
+                "name": "白",
+                "tag": "米其林二星",
+                "reason": "奈良评分最高怀石料亭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/c3e53a80-a129-11e8-81a3-06c003b736e8.jpg",
+                "link": "5b6d02048c33e4104e02d536"
+            },
+            {
+                "name": "つる由",
+                "tag": "米其林推荐",
+                "reason": "本地人认可的日料，性价比一流",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/3697d69e-a12c-11e8-81a3-06c003b736e8.jpg",
+                "link": "5b728ec98c33e405e53e5f43"
+            },
+            {
+                "name": "玄",
+                "tag": "米其林一星荞麦",
+                "reason": "代表性的奈良荞麦专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/ba78517e-a12b-11e8-b956-06c003b736e8.jpg",
+                "link": "5b6d4c668c33e4104e02d7d0"
+            },
+            {
+                "name": "I-lunga",
+                "tag": "米其林推荐",
+                "reason": "和洋折衷的现代意餐，环境绝佳",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/421db180-a129-11e8-9389-06c003b736e8.jpg",
+                "link": "5b6c12598c33e4104d992c29"
+            },
+            {
+                "name": "蔵人",
+                "tag": "米其林餐盘",
+                "reason": "值得一试的实力派老字号寿司店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180816/d99ffd84-a128-11e8-b207-06c003b736e8.jpg",
+                "link": "5b6bfe9b8c33e4104e02d315"
+            }
+        ]
+    };
+    var swiperList5 = {
+        name: "北海道",
+        shop: [
+            {
+                "name": "花小路さわ田",
+                "tag": "米其林三星",
+                "reason": "技艺超群的三星级怀石珍馐",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/60d73e88-a423-11e7-abc3-06443731d693.jpg",
+                "link": "57d686eaf7573746b592fd6d"
+            },
+            {
+                "name": "すし善",
+                "tag": "米其林一星",
+                "reason": "札幌本地老牌寿司店，本地人也认可的技术",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171106/a4a909ea-c2a8-11e7-9291-06443731d693.jpg",
+                "link": "57d686eaf7573746b592fd69"
+            },
+            {
+                "name": "活カニの花咲",
+                "tag": "米其林一星",
+                "reason": "蟹料理的帝王，日本第一蟹匠人",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/a8918918-a419-11e7-b814-06443731d693.jpg",
+                "link": "59afc6cbf757370e5ce99442"
+            },
+            {
+                "name": "壽山",
+                "tag": "米其林二星",
+                "reason": "Tabelog银牌，札幌高分传统怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/581e3982-0e49-11e8-8206-06c003b736e8.jpg",
+                "link": "5a7d42388c33e433a97d97d1"
+            },
+            {
+                "name": "L'Auberge de L'ill Sapporo",
+                "tag": "米其林一星",
+                "reason": "浪漫至高，札幌最佳约会法餐厅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/71ee4e5e-c080-11e7-94a7-06443731d693.jpg",
+                "link": "57d686eaf7573746b592fd65"
+            },
+            {
+                "name": "薄野 鮨金",
+                "tag": "米其林一星",
+                "reason": "人气传统江户前手握寿司专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/72774a30-c079-11e7-a158-06443731d693.jpg",
+                "link": "57d686eaf7573746b592fd6c"
+            },
+            {
+                "name": "こまつ",
+                "tag": "米其林一星",
+                "reason": "就餐环境最为别致，用心出品创意怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/af742fac-c06f-11e7-99fb-06443731d693.jpg",
+                "link": "57d25d2ff75737136fc38a00"
+            },
+            {
+                "name": "とらや",
+                "tag": "米其林一星",
+                "reason": "百年老店，感受料理上呈现的四季风情",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171103/b6b16a8a-c07b-11e7-b21c-06443731d693.jpg",
+                "link": "59f2a7caf757374ddee3d906"
+            },
+            {
+                "name": "村上海胆",
+                "tag": "米其林推荐",
+                "reason": "工厂直营地，一年四季提供无添加新鲜海胆",
+                "image": "http://app.eatgreat.net/static/pic/shop/20190102/20f57200-0e56-11e9-93c6-06c003b736e8.jpg",
+                "link": "5c2c56bb8c33e417effe405d"
+            },
+            {
+                "name": "牛兵卫",
+                "tag": "本地口碑",
+                "reason": "函馆新晋美味寿喜烧，就餐环境优雅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20190118/44f786d2-1af6-11e9-bd2e-06c003b736e8.jpg",
+                "link": "5c4185fe8c33e4707ee4472f"
+            }
+        ]
+    };
+    var swiperList6 = {
+        name: "熊本",
+        shop: [
+            {
+                "name": "鮨仙八",
+                "tag": "米其林二星",
+                "reason": "熊本评分最高寿司，站在顶点的职人",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/e30c9dc4-a9ab-11e8-9e42-06c003b736e8.jpg",
+                "link": "5b7e76ea8c33e454b1648cfe"
+            },
+            {
+                "name": "瑠璃紺",
+                "tag": "米其林二星",
+                "reason": "熊本稀有的正统派怀石料亭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/4529e3cc-a9ac-11e8-9739-06c003b736e8.jpg",
+                "link": "5b7e89748c33e454b2285863"
+            },
+            {
+                "name": "新屋敷 幸福論",
+                "tag": "米其林二星",
+                "reason": "本地名气极高，四级感强烈的现代怀石",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/6de6b98e-a9ac-11e8-9739-06c003b736e8.jpg",
+                "link": "5b7fad1d8c33e454b1648e18"
+            },
+            {
+                "name": "むつ五郎",
+                "tag": "米其林餐盘",
+                "reason": "口碑极佳的马肉料理居酒屋",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/c1370fe4-a9ac-11e8-b814-06c003b736e8.jpg",
+                "link": "5b7fde618c33e454b22859e7"
+            },
+            {
+                "name": "菅乃屋",
+                "tag": "米其林餐盘",
+                "reason": "高得分马肉专门店，每日座无虚席",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/3ae4835a-a9ab-11e8-bacd-06c003b736e8.jpg",
+                "link": "5b7d1a1a8c33e4374ba3de32"
+            },
+            {
+                "name": "鮨なかむら",
+                "tag": "米其林一星",
+                "reason": "不会让人失望的寿司店，性价比突破天际",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180827/5c2bd2ba-a9ac-11e8-9802-06c003b736e8.jpg",
+                "link": "5b7f69f78c33e454b2285903"
+            }
+        ]
+    };
+    var swiperList7 = {
+        name: "福冈",
+        shop: [
+            {
+                "name": "嵯峨野",
+                "tag": "米其林二星",
+                "reason": "古日式大宅中的至高日料味蕾体验",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/784893a0-a419-11e7-a5a0-06443731d693.jpg",
+                "link": "57ce346ef75737136fc38543"
+            },
+            {
+                "name": "鮨 行天",
+                "tag": "米其林三星",
+                "reason": "福冈知名江户前，大神级寿司名店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/594294ac-a427-11e7-92a0-06443731d693.jpg",
+                "link": "57c92abcf75737510313e0c9"
+            },
+            {
+                "name": "茶懐石 中伴",
+                "tag": "米其林二星",
+                "reason": "一丝不苟的传统茶怀石料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171104/7f47e556-c12a-11e7-b21c-06443731d693.jpg",
+                "link": "57ce78f1f75737136fc3860d"
+            },
+            {
+                "name": "い津み",
+                "tag": "米其林二星",
+                "reason": "极具特色老字号河豚料理专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/a109e26c-a428-11e7-a5a0-06443731d693.jpg",
+                "link": "59afb5aef757370e5beb39c1"
+            },
+            {
+                "name": "蓮REN",
+                "tag": "本地人气餐厅",
+                "reason": "小巷里的隐秘板前割烹，舌尖上的鲜美冲击",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170929/824dd48a-a4c0-11e7-b814-06443731d693.jpg",
+                "link": "59cb78c4f7573740e986c758"
+            },
+            {
+                "name": "Raisin d'Or",
+                "tag": "米其林一星",
+                "reason": "散发着迷人古典气息的福冈传统法餐代表",
+                "image": "http://app.eatgreat.net/static/pic/shop/20170928/47f6fdc4-a42b-11e7-aeb4-06443731d693.jpg",
+                "link": "57cd530cf757371370cc525b"
+            }
+        ]
+    };
+    var swiperList8 = {
+        name: "仙台",
+        shop: [
+            {
+                "name": "麟太郎",
+                "tag": "米其林一星",
+                "reason": "四季感丰富而强烈的新派怀石料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171129/8565941c-d4ba-11e7-9034-06443731d693.jpg",
+                "link": "5a1e3202f7573711dffc2b1e"
+            },
+            {
+                "name": "日本料理e.",
+                "tag": "米其林一星",
+                "reason": "就餐环境舒适别致，摩登时尚的会席盛宴",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171129/6a5368fa-d4b2-11e7-9b02-06443731d693.jpg",
+                "link": "5a1e2469f7573711dffc2ad0"
+            },
+            {
+                "name": "钟景阁",
+                "tag": "本地人气",
+                "reason": "伊达家族古宅邸，深刻感受日本文化精髓，品味独特的箪笥料理",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171129/25efe6d2-d4af-11e7-9034-06443731d693.jpg",
+                "link": "5a1e1eedf7573711dffc2abb"
+            }
+        ]
+    };
+    var swiperList9 = {
+        name: "神户",
+        shop: [
+            {
+                "name": "神户牛吉祥吉",
+                "tag": "本地人气",
+                "reason": "屡获殊荣的优质纯正神户牛专门店",
+                "image": "http://app.eatgreat.net/static/pic/shop/20181031/c2ab94bc-dcf1-11e8-b27f-06c003b736e8.jpg",
+                "link": "5bd96ff78c33e461444df807"
+            },
+            {
+                "name": "麤皮",
+                "tag": "米其林二星",
+                "reason": "世界知名的老字号扒房，人生必吃",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180327/bbf8b95c-31a1-11e8-a0c4-06c003b736e8.jpg",
+                "link": "5ab894308c33e431ebd9b67b"
+            },
+            {
+                "name": "雪月花 離れ",
+                "tag": "米其林一星",
+                "reason": "罕见的摘星铁板烧，华丽的板前厨艺表演",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/68fbfe4a-d5a7-11e7-b820-06443731d693.jpg",
+                "link": "5a1e3730f7573711dffc2b47"
+            },
+            {
+                "name": "モーリヤ 本店",
+                "tag": "本地人气",
+                "reason": "百年历史精肉店，高质神户牛必吃餐厅",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/29f93208-d5a7-11e7-978d-06443731d693.jpg",
+                "link": "5a1e27d9f7573711dffc2ae4"
+            },
+            {
+                "name": "山荷葉",
+                "tag": "米其林一星",
+                "reason": "神户市中心唯一传统茶怀石料亭",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/4a5f1710-d5a7-11e7-978d-06443731d693.jpg",
+                "link": "5a1e307ff7573711dffc2b12"
+            }
+        ]
+    };
+    var swiperList10 = {
+        name: "广岛",
+        shop: [
+            {
+                "name": "なかしま",
+                "tag": "米其林三星",
+                "reason": "实力强劲三星会席料理，融化在口腔中的细腻日本味",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/9ba375da-d5a7-11e7-9719-06443731d693.jpg",
+                "link": "5a1e6194f7573711dffc2c60"
+            },
+            {
+                "name": "鮓や 大東",
+                "tag": "米其林一星",
+                "reason": "性价比超群的正统江户前寿司屋",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/e4790a7e-0e49-11e8-9cb3-06c003b736e8.jpg",
+                "link": "5a7d61668c33e433a97d9934"
+            },
+            {
+                "name": "たこつぼ",
+                "tag": "米其林一星",
+                "reason": "人情味十足板前割烹，濑户内海的鲜味体验",
+                "image": "http://app.eatgreat.net/static/pic/shop/20180210/127569e0-0e4a-11e8-b07a-06c003b736e8.jpg",
+                "link": "5a7d675f8c33e433a97d9980"
+            },
+            {
+                "name": "天甲本店",
+                "tag": "米其林二星",
+                "reason": "一流的应季食材加上匠人精神",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/ce4c9bc4-d5a7-11e7-9719-06443731d693.jpg",
+                "link": "5a1e701cf7573711e048b8d8"
+            },
+            {
+                "name": "鮨処 ひと志",
+                "tag": "米其林一星",
+                "reason": "老字号寿司，每一贯都能感受到大厨的心意",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/b8cabbaa-d5a7-11e7-978d-06443731d693.jpg",
+                "link": "5a1e6b07f7573711e048b88d"
+            },
+            {
+                "name": "三瀧荘",
+                "tag": "米其林推荐",
+                "reason": "传统日式庭院，感受日本文化的最佳选择",
+                "image": "http://app.eatgreat.net/static/pic/shop/20171130/e7b622c4-d5a7-11e7-b820-06443731d693.jpg",
+                "link": "5a1e77adf7573711dffc2dbb"
+            }
+        ]
+    };
+    var swiperLists = [swiperList1, swiperList2, swiperList3, swiperList4, swiperList5, swiperList6, swiperList7, swiperList8, swiperList9, swiperList10];
+
+    var extraList1 = [
+        {
+            "title": "北海道上湧別郁金香公园",
+            "content": "每年的5月上旬到6月上旬，北海道湧别町的上湧别郁金香公园都会举行盛大的郁金香花海活动。上湧別郁金香公园占地宽广，一眼望不到尽头，栽种了有约200种不同品种的郁金香，可谓是当地绝景。郁金香开花最盛期，花海连着一望无际的蓝天，形成一幅美丽的自然画卷。",
+            "date": "2019.05.01 - 06.02",
+            "time": "08:00 - 18:00",
+            "address": "北海道紋別郡湧別町上湧別屯田市街地358-1",
+            "info": ""
+        }, {
+            "title": "兵库县立Flower center郁金香祭",
+            "content": "兵库县加西市的郁金香祭号称日本最大型郁金香活动，集合了500个郁金香品种，数量达到了惊人的22万株。2019年也即将迎来最激动人心的满开时节，每年都会吸引无数游人前来，但基本都是以县民为主，外国游客极少，做朋友圈最快打卡的那一人吧！",
+            "date": "2019.03.16 - 04.30",
+            "time": "09:00 - 17:00",
+            "address": "兵庫県加西市豊倉町飯森1282‐1",
+            "info": ""
+        }, {
+            "title": "新泻县长冈市国営越後丘陵公园",
+            "content": "新泻县最知名的郁金香圣地，国営越後丘陵公園栽种有131类品种郁金香，合计16万株，满开时万紫千红美不胜收。在4月28 - 29日还有知名艺术家打造的巨型花绘，必不能错过。",
+            "date": "2019.04.20 - 05.06",
+            "time": "09:30 - 17:30",
+            "address": "長岡市宮本東方町字三ツ又1950-1",
+            "info": "票价：450日元/位；儿童免费"
+        }, {
+            "title": "宮城县登米市米山郁金香祭",
+            "content": "以郁金香闻名的宫城县登米市米山，也即将开展年度最大的郁金香观赏盛宴。占地一万平方米的花圃场地共计栽种了有10万株，60个品种的郁金香。万紫千红的郁金香被巧妙地设计成各式造型，精心布置的会场一定会让你留下宝贵的美好回忆。4月28日更有特别舞台展出，相扑大会、花球贩售大会等期待你的参与。",
+            "date": "2019.04.21 - 05.05",
+            "time": "09:00 - 16:00",
+            "address": "宮城県登米市米山西野字新遠田67",
+            "info": ""
+        }, {
+            "title": "第51届函馆惠山杜鹃花祭",
+            "content": "函馆著名的杜鹃花公园位于惠山山脚下，每年都会举办杜鹃花祭，今年迎来了第51个年头。整个山脚下盛放的杜鹃花接近60万株，数量惊人，漫山遍野都被杜鹃染成一片深红。在杜鹃花祭期间还将特设歌谣会场，骑马体验以及海产特产卖会。",
+            "date": "2019.05.01 - 06.02",
+            "time": "08:00 - 18:00",
+            "address": "北海道紋別郡湧別町上湧別屯田市街地358-1",
+            "info": ""
+        }, {
+            "title": "东京六義园",
+            "content": "自日本元禄时代开始，东京就开始流行赏杜鹃花，当时潮流的中心地就是六義园。六義园种植有30个品种，约1000株花，结合江户风情十足的日式庭院，别有一番风味。虽然品种与数量不算多，但当年多个古品种杜鹃花，都被很好地保存了下来，非常难得，喜欢杜鹃的人看到一定会欣喜若狂。",
+            "date": "2019.04.13 - 05.06",
+            "time": "10:30 - 15:00",
+            "address": "东京都文京区本駒込6-16-3",
+            "info": ""
+        }, {
+            "title": "箱根山の酒店花海",
+            "content": "箱根历史悠久的山の酒店拥有广阔的庭院，每年例行举办的赏杜鹃花活动都会吸引到无数游人。约50个品种的各式杜鹃约3500株，在精心照顾下每一朵都花蕾都十分动人。树龄超过100年以上的，比成人更高的杜鹃木比比皆是，古品种以及稀有品种更是让人眼花缭乱。",
+            "date": "2019.04.下旬 - 05.下旬",
+            "time": "09:00 - 17:00",
+            "address": "神奈川県足柄下郡箱根町元箱根80",
+            "info": ""
+        }, {
+            "title": "千叶县香取市小見川城山公园",
+            "content": "作为赏樱圣地而出名的小见川城山公园，在樱花落下帷幕之后，绚烂夺目的杜鹃花一刻也不愿意等待，齐齐盛开。杜鹃满开时和樱花的内敛不一样，鲜红的杜鹃将整个山坡都染成了震撼的红色，再次向人们宣告着春天正当道。",
+            "date": "2019.05.01 - 20",
+            "time": "全天开放",
+            "address": "香取市小見川431",
+            "info": ""
+        }, {
+            "title": "三室戸寺杜鹃花园",
+            "content": "京都三室戸寺被称为花之天国，一年四季都可以欣赏不到不同的花。4月下旬到5月中旬迎来了三室戸寺的春天，合计2万株杜鹃花一齐绽放堪称关西最强。紫、粉、白三色杜鹃加1000株稀有的石楠花齐齐盛放，京都最佳拍照&放空点等你打卡。",
+            "date": "2019.04.20 - 05.12",
+            "time": "08:30 - 16:30",
+            "address": "宇治市莵道滋賀谷21",
+            "info": ""
+        }, {
+            "title": "北海道Rose Weeks",
+            "content": "恵庭市牧场的银河庭园即将进入夏季玫瑰花祭，被玫瑰的香气团团簇拥，感受自然壮丽的北海道气息。Rose Weeks的最大特色是可以近距离细细欣赏精心栽培的玫瑰，并且还可以用你的舌头去感受它。这里的玫瑰采用无农药栽培技术，专门供游人品尝而生，现场可以直接吃到各式各样以玫瑰为主食材制作而成的美食。",
+            "date": "2019.06.29 - 07.15",
+            "time": "全天开放",
+            "address": "恵庭市牧場281-1",
+            "info": ""
+        }, {
+            "title": "东京旧古河庭园春日玫瑰祭",
+            "content": "在东京旧古河庭园迎接近100个品种，合计2万株玫瑰的盛大绽放。为了迎合春天玫瑰开花而举办的“春日玫瑰花祭”今年已经是第19届，是东京最盛大的玫瑰展览。活动期间现场将会开展“春玫瑰音乐会”“春玫瑰人气投票”“玫瑰与洋馆”等活动。夜幕降临之后还可以欣赏到迷人的夜景，精心布置的灯光让玫瑰与白天的风情交叉相撞，散发出别致优雅气息。",
+            "date": "2019.05.01 - 06.02",
+            "time": "08:00 - 18:00",
+            "address": "北海道紋別郡湧別町上湧別屯田市街地358-1",
+            "info": ""
+        }, {
+            "title": "横滨Verny公园玫瑰展",
+            "content": "横滨横須賀市的Verny公园拥有得天独厚的地理优势，近港而建可以远眺海平线，落日景观绝佳，公园内种植的玫瑰再为这里增添了不少风情。院内有约130个品种，1400株的玫瑰会同时绽放，在广场中心可以深切感受到沐浴在花海中的感觉。拿上便当，带上席子，静享午后愉快一刻是不少本地人的选择。",
+            "date": "2019.04.27 - 05.26",
+            "time": "全天开放",
+            "address": "横須賀市汐入町1-1",
+            "info": ""
+        }];
+
+    var extraList2 = [
+        {
+            "title": "札幌定山溪草莓园",
+            "content": "札幌定山溪草莓园一直是本地人气摘草莓圣地，种植了北海道限定“健太郎”草莓。每年6月下旬到7月上旬可以吃到纯正露天栽培的健太郎草莓，不止是本地人，就连别的县民也会专程驱车赶来。最吸引人的地方是草莓自助餐，仅需1300日元即可享受30分钟无限畅享，快来感受北海道特有的“健太郎”风味吧！",
+            "date": "2019.06.上旬 - 07.上旬",
+            "time": "09:00 - 17:00",
+            "address": "北海道札幌市南区定山渓832-1",
+            "info": "票价信息：16岁以上1300日元；16岁以下1000日元"
+        }, {
+            "title": "东京多摩新仓农园",
+            "content": "位于多摩的新仓农园，是东京地区唯一一座观光农园。多摩丘陵地带独有的自然环境孕育了这里品质优异的水果，草莓自然是这里的种子选手啦。新仓农园坚持不用农药，而使用天然水、蜂蜜、高设栽培种植草莓。农园主要种植的草莓品种是大众情人章姬与红颜，均以味浓甜、芳香、果色艳丽美观、柔软多汁为特点。在细心的栽培下，在这里吃草莓完全不用加炼乳。新仓农园目前免入场费，时间无限制，根据所摘草莓的数量计算价钱，100克为324日元。",
+            "date": "13:00 – 16:00",
+            "time": "2017.02.19 – 5月下旬",
+            "address": "东京都多摩市落川1179",
+            "info": ""
+        }, {
+            "title": "京都モモタ农园",
+            "content": "在京都山科地区愉快的进行狩猎草莓的游戏吧！MOMOTA农园位于风景优美的京都市内，地理位置优越，交通方便，快带上你心爱的TA一起来享受摘草莓的乐趣。MOMOTA农园使用高设栽培，每一颗草莓都长得又大又饱满，鲜甜多汁是最大的特点。这里出要出产的草莓品种为章姬。农园采取自助形式，60分钟时限任啖草莓，成人1700日元，儿童1200日元，入场即送免费炼乳，性价比极高。因为人气太旺，现在的MOMOTA必须要提前一个星期预约啦。",
+            "date": "直至2019.05.中旬",
+            "time": "10:00 - 17:00",
+            "address": "京都府京都市山科区四之宫奈良野町34",
+            "info": ""
+        }, {
+            "title": "大阪いちごの堺",
+            "content": "位于大阪府堺市的草莓之堺农园，可以说是一座可以吃的草莓博物馆！农园引入了大阪府环境农林水产综合研究所开发的中空构造栽培槽，与一般的高设栽培不同，中空栽培槽能预防地表温度大幅度变动而影响到草莓的品质，这里出产的草莓质量极高。草莓之堺农园的草莓数量品种繁多，除了常见的章姬、红颜外，还有桃薰、四星、香野等等。特别是号称除了在这里以外其他地方都品尝不到的四星草莓，有着含糖量高，味道浓厚的特点，有着一大票的粉丝。农园采用完全预约制，价格为大人2000日元，儿童1500日元，时限为30分钟，免费提供炼乳及巧克力酱。",
+            "date": "至2019年6月",
+            "time": "10:00 - 17:00",
+            "address": "大阪府堺市北区北长尾町6-2-7",
+            "info": "官网：http://www.ichigonosakai.com/"
+        }, {
+            "title": "日光Strawberry Park",
+            "content": "日光作为日本著名的名胜景点早已为人熟知，山清水秀自然环境优美的日光孕育出质量极高的草莓，除了Local基本没人知道这里的草莓和风景一样让人惊艳。日光草莓园有高设栽培与土耕栽培两种类型的草莓，使用的化学肥料以及农药都只有栃木县标准的一半，不止个头丰满鲜甜多汁，更是让人吃得放心。日光草莓园种植有四种类不同草莓，酸甜度任君选择。去之前记得在官网进行提前预约，门票为成人1700日元，儿童1200日元，无限畅享30分钟。",
+            "date": "直至6月上旬",
+            "time": "10:00 - 16:00",
+            "address": "栃木県日光市芹沼3581",
+            "info": "官网：http://www.nikkoichigo.com/"
+        }, {
+            "title": "福冈八女市プーさん的草莓园",
+            "content": "老字号PU桑的草莓园是九州最大规模的草莓园，共有约7800平方，采用多段式的高设栽培，草莓的高品质以及高收获量是这里的最大特点，还曾参加过全日本草莓大赛，获得优异成绩。占地如此宽广，那品种一定少不了。农园栽培的草莓品种一共有10种之多，有Sachinoka、弥生公主、桃薰等等，最引人注目的当是这里出品的あまおう（Amaou），是这里的镇园招牌。农园出品的Amaou就曾代表了福冈参加全日本草莓大赛，这种草莓的特征是，通体呈现十分均匀浓厚的鲜红，富有光泽，能够轻易勾起人们的食欲。从味道上来说，因为较高的糖度使它那甘甜的口感十分明显，酸度适中，有一种草莓特有的酸甜可口的浓郁芬芳。",
+            "date": "直至2019年5月下旬",
+            "time": "10:00 - 16:00",
+            "address": "福岡県八女市馬場600-3",
+            "info": "官网：http://gennousya.com"
+        }];
+    var extraLists = [extraList1, extraList2];
+
+    for (var i = 0; i < swiperLists.length; i++) {
+        var swiperListsItem = '\n' +
+            '    <div class="alert alert-container city-alert city' + i + '-alert">\n' +
+            '        <div class="main">\n' +
+            '            <div class="title">' + swiperLists[i].name + '</div>\n' +
+            '            <div id="city' + i + 'Content" class="content"></div>\n' +
+            '        </div>\n' +
+            '        <div class="close-btn" onclick="hideEveryThing()">✕</div>\n' +
+            '    </div>';
+        $("#cityAlertRoot").append(swiperListsItem);
+        for (var j = 0; j < swiperLists[i].shop.length; j++) {
+            var shopListItem = '<a id="' + swiperLists[i].shop[j].link + '" class="item" href="legooorderapp://shop/' + swiperLists[i].shop[j].link + '" onclick="toshop(this)">\n' +
+                '    <div class="tag">' + swiperLists[i].shop[j].tag + '</div>\n' +
+                '    <img class="image" src="' + swiperLists[i].shop[j].image + '"/>\n' +
+                '    <div class="item-content">\n' +
+                '        <div class="name">' + swiperLists[i].shop[j].name + '</div>\n' +
+                '        <div class="reason">' + swiperLists[i].shop[j].reason + '</div>\n' +
+                '    </div>\n' +
+                '</a>';
+            $("#city" + i + "Content").append(shopListItem);
+        }
+    }
+
+    for (var k = 0; k < extraList1.length; k++) {
+        var extraList1Item = '\n' +
+            '        <div class="item" onclick="showAlert(2,' + k + ')">\n' +
+            '            <img class="image" src="image/Japan41NewYearAnniversary/extra1 (' + (k + 1) + ').jpg">\n' +
+            '            <div class="content">\n' +
+            '                <div class="date">' + extraList1[k].date + '</div>\n' +
+            '                <div class="title">' + extraList1[k].title + '</div>\n' +
+            '            </div>\n' +
+            '        </div>';
+        var extraList1Alert = '\n' +
+            '<div class="alert-container extra-alert extra1' + k + '-alert alert">\n' +
+            '    <div class="main">\n' +
+            '        <div class="title">' + extraList1[k].title + '</div>\n' +
+            '        <div class="content">\n' +
+            '            <div class="text">' + extraList1[k].content + '</div>\n' +
+            '            <div class="subline">开放日期：' + extraList1[k].date + '</div>\n' +
+            '            <div class="subline">开园时间：' + extraList1[k].time + '</div>\n' +
+            '            <div class="subline">地址：' + extraList1[k].address + '</div>\n' +
+            '            <div class="subline">' + extraList1[k].info + '</div>\n' +
+            '        </div>\n' +
+            '    </div>\n' +
+            '    <div class="close-btn" onclick="hideEveryThing()">关闭</div>\n' +
+            '</div>';
+        $("#extraList1Root").append(extraList1Item);
+        $("#extraListAlertRoot").append(extraList1Alert);
+    }
+
+    for (var l = 0; l < extraList2.length; l++) {
+        var extraList2Item = '\n' +
+            '        <div class="item" onclick="showAlert(3,' + l + ')">\n' +
+            '            <img class="image" src="image/Japan41NewYearAnniversary/extra2 (' + (l + 1) + ').jpg">\n' +
+            '            <div class="content">\n' +
+            '                <div class="date">' + extraList2[l].date + '</div>\n' +
+            '                <div class="title">' + extraList2[l].title + '</div>\n' +
+            '            </div>\n' +
+            '        </div>';
+        var extraList2Alert = '\n' +
+            '<div class="alert-container extra-alert extra2' + l + '-alert alert">\n' +
+            '    <div class="main">\n' +
+            '        <div class="title">' + extraList2[l].title + '</div>\n' +
+            '        <div class="content">\n' +
+            '            <div class="text">' + extraList2[l].content + '</div>\n' +
+            '            <div class="subline">开放日期：' + extraList2[l].date + '</div>\n' +
+            '            <div class="subline">开园时间：' + extraList2[l].time + '</div>\n' +
+            '            <div class="subline">地址：' + extraList2[l].address + '</div>\n' +
+            '            <div class="subline">' + extraList2[l].info + '</div>\n' +
+            '        </div>\n' +
+            '    </div>\n' +
+            '    <div class="close-btn" onclick="hideEveryThing()">关闭</div>\n' +
+            '</div>';
+        $("#extraList2Root").append(extraList2Item);
+        $("#extraListAlertRoot").append(extraList2Alert);
+    }
+
+    window.onload = function () {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    };
+
+    // $(".background-image").css("height", $(window).width());
+    $(".item .image").css("height", ($(window).width() + 100) * 9 / 32);
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+
+    // 小程序无时讯
+    // function toevent(e) {
+    //     wx.miniProgram.navigateTo({
+    //         url: '/pages/detailpages/planpage?planid=' + e.id
+    //     })
+    // }
+
+    function toproduct(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/productinfo?productid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>

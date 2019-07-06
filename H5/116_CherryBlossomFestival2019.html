@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>樱花季</title>
+    <link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/tab-module3.css">
+    <style type="text/css">
+        body {
+            background: rgb(233, 118, 143);
+        }
+
+        .background-image {
+            background: url('image/CherryBlossomFestival2019/background.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        .background-image:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(rgba(233, 118, 143, 0.3), rgba(233, 118, 143, 1));
+        }
+
+        .header-container .tag {
+            color: #ff99af;
+        }
+
+        .module-1 .panel-block .tag2 {
+            color: #fff;
+            background: rgb(233, 118, 143);
+        }
+
+        .module-1 .panel-block .btn-booking {
+            background: rgb(233, 118, 143);
+            color: #fff;
+        }
+
+        .module-3 .panel-block .title:after {
+            background: rgb(233, 118, 143);
+        }
+
+        .content-subtitle:before {
+            background: rgb(233, 118, 143);
+        }
+
+        .content {
+            border-top: solid rgba(233, 118, 143, 0.5) 10px;
+        }
+
+    </style>
+</head>
+<body ontouchstart="" onmouseover="">
+<div class="container">
+    <div class="header-container">
+        <div class="tag">2019樱花季</div>
+        <div class="title">2019樱花季浪漫开启
+        </div>
+        <div class="subtitle" onclick="switchSubtitle()">年年岁岁花相似，岁岁年年人不同。<br>
+            樱花被视为日本的国花，花开时的绚烂和花落时的唯美画面<br>
+            直让人想将这画面永远定格在此<br>
+            赏樱和美食一直以来都是一对拆不散的CP<br>
+            比起在树下把酒言欢，更爱去探寻一期一会的感动美味 <br>
+            樱花季活动期间。<br>
+            <b style="font-size: 15rem">通过海外点餐助手APP或小程序成功预订餐厅，即送日本5天上网卡一张！</b>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-title">东京与京都TOP10赏樱名所推荐
+            <div class="content-subtitle">东京</div>
+        </div>
+        <div class="swiper-container swiper-1">
+            <div id="swiperWrapper1" class="swiper-wrapper">
+            </div>
+        </div>
+        <div class="content-title">
+            <div class="content-subtitle">京都</div>
+        </div>
+        <div class="swiper-container swiper-2">
+            <div id="swiperWrapper2" class="swiper-wrapper">
+            </div>
+        </div>
+        <div class="content-title">Great推荐餐厅</div>
+        <div class="swiper-container swiper-3">
+            <div id="swiperWrapper3" class="swiper-wrapper">
+            </div>
+        </div>
+        <div class="content-title">赏樱推荐餐厅
+            <div class="content-subtitle warning">座位紧张，以下餐厅如需预订请与微信客服联系</div>
+        </div>
+        <div class="swiper-container swiper-4">
+            <div id="swiperWrapper4" class="swiper-wrapper">
+            </div>
+        </div>
+    </div>
+    <div class="bottom-info">
+        活动时间：2019.03.01 - 2019.03.31<br><br>
+        活动规则：<br>活动期间，预订日本餐厅成功即赠日本5天上网卡一张；每个订单限一份；同一批次客人分开下单无效。<br><br>
+        活动说明： <br>
+        1. 活动仅限通过海外点餐助手APP或小程序预订日本餐厅成功的客人；餐厅预订成功后请主动添加客服微信“haiwaidiancan”进行联系领取。<br>
+        2. 赠送电话卡均为上网卡，无法打电话，5天10GB的4G流量，超出后降低到3G。 <br>
+        3. 仅支持机场自取货，可供取货的机场有：成都、上海、广州、天津、青岛、西安、大连、杭州、武汉、北京、南京。 <br>
+        4. 赠送的上网卡不能折现，不接受退款。 <br>
+        5. 活动有效期为您的预订下单时间，而非就餐时间。 <br>
+        6. 本活动最终解释权归“海外点餐助手”所有，如有疑问，请详询客服。 <br>
+    </div>
+</div>
+<div class="background-image"></div>
+<script type="text/javascript" src="js/jweixin-1.3.2.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    $(document).ready(function () {
+        wx.miniProgram.getEnv(function (res) {
+            if (res.miniprogram) {
+                $("a").click(function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                });
+            } else {
+            }
+        });
+    });
+    var swiperList1 = ["新宿御苑", "上野恩赐公园", "目黑川", "日比谷公园", "芝公园"];
+    var swiperList2 = ["御室（仁和寺）", "岚山", "平安神宫 神苑", "清水寺", "元离宫二条城（清流园）"];
+    var swiperList3 = [
+        {
+            "name": "芝豆腐屋うかい",
+            "tag": "人气餐厅",
+            "reason": "东京塔下风情满载豆腐屋",
+            "link": "57ac32faf757372193b924d1"
+        },
+        {
+            "name": "CRAFTALE",
+            "tag": "米其林一星",
+            "reason": "目黑川河畔美妙法餐",
+            "link": "5a7555ef8c33e44f73c3e315"
+        },
+        {
+            "name": "魚政",
+            "tag": "米其林推荐",
+            "reason": "东京排第三的鳗鱼饭",
+            "link": "5a7528148c33e44f73c3e28b"
+        },
+        {
+            "name": "乃木坂しん",
+            "tag": "米其林一星",
+            "reason": "ANA头等舱餐饮合作供应商",
+            "link": "59e86e87f75737731eddfc6e"
+        },
+        {
+            "name": "和山村",
+            "tag": "米其林三星",
+            "reason": "日本性价比至高特级怀石",
+            "link": "5b6d47758c33e4104e02d792"
+        }
+    ];
+    var swiperList4 = [
+        {
+            "name": "NARITAYUTAKA ",
+            "reason": "和洋融合的崭新法餐",
+            "location": "东京都目黑区中目黑",
+            "price": "6000"
+        },
+        {
+            "name": "AQUAVIT ",
+            "reason": "北欧传统料理风情",
+            "location": "东京都港区北青山",
+            "price": "800"
+        },
+        {
+            "name": "鮨 にしち ",
+            "reason": "前卫的正宗江户前流派",
+            "location": "东京都江东区牡丹",
+            "price": "16000"
+        },
+        {
+            "name": "木春堂 ",
+            "reason": "有自家庭院的传统石烧料理",
+            "location": "东京都文京区关口",
+            "price": "35000"
+        },
+        {
+            "name": "Onda Tokyo ",
+            "reason": "静冈县的食材结合意式烹饪手法",
+            "location": "东京都目黑区中目黑",
+            "price": "5000"
+        },
+        {
+            "name": "南禅寺 瓢亭 日比谷店 ",
+            "reason": "来自京都的三星京料亭",
+            "location": "东京都千代田区有乐町",
+            "price": "10000"
+        },
+        {
+            "name": "HIGASHI-YAMA Tokyo ",
+            "reason": "打破传统的现代日本料理",
+            "location": "东京都目黑区东山",
+            "price": "4000"
+        },
+        {
+            "name": "Mille_Tokyo ",
+            "reason": "日式精神的纤细法餐",
+            "location": "东京都港区赤坂",
+            "price": "5000"
+        },
+        {
+            "name": "鮨 なかむら ",
+            "reason": "祇园实力派寿司代表",
+            "location": "京都市东山区未吉町",
+            "price": "30000"
+        },
+        {
+            "name": "Le BENKEI ",
+            "reason": "接待过众多皇室宾客的名店",
+            "location": "奈良县大和郡山市北郡山町",
+            "price": "10000"
+        },
+        {
+            "name": "L'ardoise ",
+            "reason": "世界有名的福山市独创法餐",
+            "location": "广岛县福山市御幸町上岩成",
+            "price": "4000"
+        },
+        {
+            "name": "料亭 杉の井穂濤 ",
+            "reason": "金沢老字号二星料亭",
+            "location": "石川县金沢市清川町",
+            "price": "8000"
+        },
+        {
+            "name": "ジャルダンポール・ボキューズ ",
+            "reason": "融合了本地文化的独创洋食",
+            "location": "石川县金沢市広坂",
+            "price": "5000"
+        }
+    ];
+    for (var i = 0; i < swiperList1.length; i++) {
+        var swiperListItem1 = '<div class="swiper-slide module-2">' +
+            '<div id="' + swiperList1[i].link + '" href="legooorderapp://shop/' + swiperList1[i].link + '" class="panel-block">\n' +
+            '                    <div class="image"\n' +
+            '                         style="background: url(\'image/CherryBlossomFestival2019/recommand1 (' + (i + 1) + ').jpg\') no-repeat center;background-size: cover"></div>\n' +
+            '                    <div class="name">' + swiperList1[i] + '</div>\n' +
+            '                </div>' +
+            '</div>';
+        $("#swiperWrapper1").append(swiperListItem1);
+    }
+    for (var i = 0; i < swiperList2.length; i++) {
+        var swiperListItem2 = '<div class="swiper-slide module-2">' +
+            '<div id="' + swiperList2[i].link + '" href="legooorderapp://shop/' + swiperList2[i].link + '" class="panel-block">\n' +
+            '                    <div class="image"\n' +
+            '                         style="background: url(\'image/CherryBlossomFestival2019/recommand2 (' + (i + 1) + ').jpg\') no-repeat center;background-size: cover"></div>\n' +
+            '                    <div class="name">' + swiperList2[i] + '</div>\n' +
+            '                </div>' +
+            '</div>';
+        $("#swiperWrapper2").append(swiperListItem2);
+    }
+    for (var i = 0; i < swiperList3.length; i++) {
+        var swiperListItem3 = '<div class="swiper-slide module-1">' +
+            '<a id="' + swiperList3[i].link + '" href="legooorderapp://shop/' + swiperList3[i].link + '" class="panel-block" onclick="toshop(this);">\n' +
+            '                    <div class="image"\n' +
+            '                         style="background: url(\'image/CherryBlossomFestival2019/shop1 (' + (i + 1) + ').jpg\') no-repeat center;background-size: cover"></div>\n' +
+            '                    <div class="info-block">\n' +
+            '                        <div class="title">' + swiperList3[i].name + ' </div>\n' +
+            '                        <div class="tag2">' + swiperList3[i].tag + '</div>\n' +
+            '                        <div class="reason">' + swiperList3[i].reason + '</div>\n' +
+            '                        <div class="btn-booking">立即预定</div>\n' +
+            '                    </div>\n' +
+            '                </a>' +
+            '</div>';
+        $("#swiperWrapper3").append(swiperListItem3);
+    }
+    for (var i = 0; i < swiperList4.length; i++) {
+        var swiperListItem4 = '<div class="swiper-slide module-3">' +
+            '<div id="' + swiperList4[i].link + '" href="legooorderapp://shop/' + swiperList4[i].link + '" class="panel-block">\n' +
+            '                        <div class="title">' + swiperList4[i].name + ' </div>\n' +
+            '                    <div class="image"\n' +
+            '                         style="background: url(\'image/CherryBlossomFestival2019/recommand3 (' + (i + 1) + ').jpg\') no-repeat center;background-size: cover"></div>\n' +
+            '                        <div class="reason">" ' + swiperList4[i].reason + ' "</div>\n' +
+            '                        <div class="location">地址：' + swiperList4[i].location + '</div>\n' +
+            '                        <div class="price">人均：' + swiperList4[i].price + '日元</div>\n' +
+            '                </div>' +
+            '</div>';
+        $("#swiperWrapper4").append(swiperListItem4);
+    }
+
+    $(document).ready(function () {
+        var Swiper1 = new Swiper('.swiper-1', {
+            spaceBetween: 14,
+            slidesPerView: 'auto',
+            freeMode: true,
+            autoplay: {
+                delay: 3000,
+            },
+        });
+        var Swiper2 = new Swiper('.swiper-2', {
+            spaceBetween: 14,
+            slidesPerView: 'auto',
+            freeMode: true,
+            autoplay: {
+                delay: 2500,
+            },
+        });
+        var Swiper3 = new Swiper('.swiper-3', {
+            spaceBetween: 20,
+            autoHeight: true,
+            slidesPerView: 'auto'
+        });
+        var Swiper4 = new Swiper('.swiper-4', {
+            spaceBetween: 20,
+            autoHeight: true,
+            slidesPerView: 'auto'
+        });
+    });
+
+    $(".background-image").css("height", $(window).width());
+    $(".module-1 .panel-block .image").css("height", ($(window).width() - 102) * 9 / 16);
+    $(".module-2 .panel-block .image").css("height", ($(window).width() * 0.35) * 9 / 16);
+    $(".module-3 .panel-block .image").css("height", ($(window).width() - 160) * 9 / 16);
+
+    function toshop(e) {
+        wx.miniProgram.navigateTo({
+            url: '/pages/detailpages/restaurantinfo?shopid=' + e.id
+        })
+    }
+</script>
+</body>
+</html>
