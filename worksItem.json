@@ -4,23 +4,23 @@
     "resName": "VanArtist"
   },
   {
-    "name": "VanArtist艺术作品集展示社区",
+    "name": "VanMovie电影购票APP",
+    "resName": "VanMovie"
+  },
+  {
+    "name": "VanVet宠物交流社区",
     "resName": "VanVet"
   },
   {
-    "name": "VanArtist艺术作品集展示社区",
+    "name": "VanWardrobe购物APP设计",
     "resName": "VanWarDrobe"
   },
   {
-    "name": "VanArtist艺术作品集展示社区",
-    "resName": "VanArtist"
+    "name": "VanSport极限运动社区",
+    "resName": "VanSport"
   },
   {
-    "name": "VanArtist艺术作品集展示社区",
-    "resName": "VanArtist"
-  },
-  {
-    "name": "VanArtist艺术作品集展示社区",
-    "resName": "VanArtist"
+    "name": "前期设计作品",
+    "resName": "VanDesign1"
   }
 ]
