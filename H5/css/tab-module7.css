@@ -1,0 +1,392 @@
+.container {
+    text-align: center;
+    padding: 2.3rem 0 0;
+    color: #fff;
+}
+
+.header-info .logo {
+    width: 54%;
+    margin-bottom: 1rem;
+}
+
+.header-info .title {
+    text-align: left;
+    padding: 0 0.53rem;
+    font-size: 0.45rem;
+    font-weight: bold;
+    margin-bottom: 0.32rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header-info .content {
+    text-align: left;
+    padding: 0 0.53rem;
+    font-size: 0.37rem;
+    opacity: 0.6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tab .item:hover {
+    text-decoration: none;
+}
+
+.booking-button {
+    position: absolute;
+    left: 50%;
+    border-radius: 0.08rem;
+    border: solid #fff 0.02rem;
+    padding: 0.4rem 0.64rem;
+    font-size: 0.37rem;
+    margin-top: 0.56rem;
+    color: #fff;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.booking-button:hover {
+    text-decoration: none;
+}
+
+.booking-button:active {
+    background: #fff;
+    color: #000;
+}
+
+.tab {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.85rem 0.53rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.tab.disable {
+    display: none;
+}
+
+.tab.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    padding: 0.4rem 0.53rem;
+    background: linear-gradient(#000, transparent);
+}
+
+.tab .item {
+    width: 30%;
+    font-size: 0.40rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    padding: 0.22rem 0;
+}
+
+.tab .item.active {
+    background: #ffd600;
+    color: #333;
+}
+
+.list-container {
+    margin-top: 3rem;
+}
+
+.list-container.disable {
+    margin-top: 1rem;
+}
+
+.list-container .title-block {
+    position: relative;
+    color: #fff;
+}
+
+.list-container .title-block:before {
+    content: '.';
+    position: absolute;
+    left: 0.53rem;
+    top: 0;
+    background: #fff;
+    width: 0.16rem;
+    height: 100%;
+}
+
+.list-container .title-block .title {
+    text-align: left;
+    padding: 0 1rem;
+    font-size: 0.53rem;
+    font-weight: bold;
+    margin-bottom: 0.11rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.list-container .title-block .content {
+    text-align: left;
+    padding: 0 1rem;
+    font-size: 0.37rem;
+    margin-bottom: 0.95rem;
+    opacity: 0.6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.item-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0.43rem;
+    margin-bottom: 0.85rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.item-block .item {
+    color: #fff;
+    margin-bottom: 0.32rem;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.item-block .item:hover {
+    text-decoration: none;
+}
+
+.item-block .item:active {
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    -o-transform: scale(0.98);
+    transform: scale(0.98);
+}
+
+.item-block.type1 .item {
+    width: 48%;
+    position: relative;
+    border-radius: 0.21rem;
+    overflow: hidden;
+    border: solid #fff 0.03rem;
+}
+
+.item-block.type1 .item:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.item-block.type1 .item .image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.item-block.type1 .item .info {
+    position: absolute;
+    z-index: 3;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    text-align: center;
+}
+
+.item-block.type1 .item .title {
+    font-size: 0.53rem;
+    font-weight: bold;
+    margin-bottom: -0.11rem;
+    padding: 0;
+}
+
+.item-block.type1 .item .subtitle {
+    font-size: 0.67rem;
+    font-weight: bold;
+}
+
+.item-block.type2 .item {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.64rem;
+    border-radius: 0.21rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.item-block.type2 .item .image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.item-block.type2 .item .info {
+    background: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    position: relative;
+    padding: 0.53rem;
+}
+
+.item-block.type2 .item .info .name {
+    font-size: 0.53rem;
+    font-weight: bold;
+}
+
+.item-block.type2 .item .info .price-block div {
+    display: inline-block;
+}
+
+.item-block.type2 .item .info .price-block .price1 {
+    font-size: 0.43rem;
+    font-weight: bold;
+    color: #ffd600;
+}
+
+.item-block.type2 .item .info .price-block .unit {
+    font-size: 0.37rem;
+    margin-right: 0.21rem;
+}
+
+.item-block.type2 .item .info .price-block .price2 {
+    font-size: 0.37rem;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.item-block.type2 .item .info .button {
+    font-size: 0.40rem;
+    position: absolute;
+    right: 0.53rem;
+    top: 50%;
+    border: solid #fff 0.02rem;
+    border-radius: 0.16rem;
+    padding: 0.11rem 0.32rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.item-block.type3 .item {
+    width: 100%;
+    position: relative;
+    border-radius: 0.21rem;
+    overflow: hidden;
+    text-align: left;
+}
+
+.item-block.type3 .item:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    content: '';
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+}
+
+.item-block.type3 .item .image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.item-block.type3 .item .info {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    left: 0.53rem;
+    bottom: 0.53rem;
+}
+
+.item-block.type3 .item .info .name {
+    font-size: 0.53rem;
+    font-weight: bold;
+}
+
+.item-block.type3 .item .info .price-block div {
+    display: inline-block;
+}
+
+.item-block.type3 .item .info .price-block .price1 {
+    font-size: 0.43rem;
+    font-weight: bold;
+    color: #ffd600;
+}
+
+.item-block.type3 .item .info .price-block .unit {
+    font-size: 0.37rem;
+    margin-right: 0.21rem;
+}
+
+.item-block.type3 .item .info .price-block .price2 {
+    font-size: 0.37rem;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.item-block.type3 .item .info .button {
+    font-size: 0.40rem;
+    position: absolute;
+    right: 1.06rem;
+    top: 50%;
+    border: solid #fff 0.02rem;
+    border-radius: 0.16rem;
+    padding: 0.11rem 0.32rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.item-block.type2 .item:active .button, .item-block.type3 .item:active .button {
+    background: #fff;
+    color: #333;
+}
+
+.blank-space {
+    width: 100%;
+    height: 3.8rem;
+    opacity: 0;
+}

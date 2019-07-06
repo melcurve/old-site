@@ -1,0 +1,386 @@
+.container {
+    text-align: center;
+    color: #444444;
+}
+
+.header-info {
+    position: relative;
+    background-size: cover;
+    text-align: left;
+    padding: 0.8rem 0.43rem 1.64rem;
+    display: flex;
+    height: 4.4rem;
+    align-items: unset;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.header-info:before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-info:after {
+    content: '展开全文';
+    position: absolute;
+    bottom: 0.8rem;
+    color: #fff;
+    z-index: 2;
+    left: 3.2rem;
+    overflow: visible;
+    padding: 0.11rem 0.32rem;
+    border-radius: 0.08rem;
+    border: solid #fff 0.02rem;
+    -webkit-transition: background 0.2s, left 0.5s;
+    -moz-transition: background 0.2s, left 0.5s;
+    -ms-transition: background 0.2s, left 0.5s;
+    -o-transition: background 0.2s, left 0.5s;
+    transition: background 0.2s, left 0.5s;
+}
+
+.header-info:active:after {
+    background: #fff;
+    color: #000;
+}
+
+.header-info .left {
+    z-index: 2;
+    flex-shrink: 0;
+    object-fit: contain;
+    width: 2.3rem;
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.header-info .right {
+    z-index: 2;
+    width: 100%;
+    padding-left: 0.4rem;
+}
+
+.header-info .right .title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.40rem;
+    margin-bottom: 0.04rem;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.header-info .right .content {
+    color: #fff;
+    position: relative;
+    opacity: 0.7;
+    font-size: 0.35rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/* 展开 */
+
+.header-info.complete {
+    height: 10rem;
+    align-items: flex-start;
+}
+
+.header-info.complete:before {
+    /*backdrop-filter: blur(10px);*/
+    /*-webkit-backdrop-filter: blur(10px);*/
+}
+
+.header-info.complete:after {
+    content: '收起全文';
+    left: 0.72rem;
+}
+
+.header-info.complete .right .title {
+    font-size: 0.64rem;
+    margin-top: 0.16rem;
+    margin-bottom: 0.32rem;
+}
+
+.header-info.complete .left {
+    width: 0;
+    opacity: 0;
+}
+
+@keyframes shank {
+    0% {
+        opacity: 0.7;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.header-info.complete .right .content {
+    -webkit-line-clamp: 999;
+    overflow: visible;
+    -webkit-animation: shank 1s;
+    -o-animation: shank 1s;
+    animation: shank 1s;
+}
+
+.tab {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: scroll;
+    text-align: left;
+    white-space: nowrap;
+    background: #fff;
+    z-index: 9;
+    pointer-events: none;
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-box-shadow: 0 0.07rem 0.2rem rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0.07rem 0.2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.07rem 0.2rem rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.tab.sticky {
+    pointer-events: auto;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.tab .item {
+    display: inline-block;
+    font-size: 0.4rem;
+    padding: 0.48rem 0.48rem;
+    color: #000;
+    position: relative;
+    opacity: 0.4;
+}
+
+.tab .item.active {
+    opacity: 1;
+}
+
+.tab .item.active:before {
+    content: ' ';
+    position: absolute;
+    width: 60%;
+    height: 0.06rem;
+    background: #000;
+    border-radius: 100px;
+    left: 50%;
+    bottom: 0.06rem;
+    z-index: 10;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#tablist > .title {
+    text-align: left;
+    font-size: 0.53rem;
+    font-weight: bold;
+    padding: 0.53rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#tablist .item-block {
+    width: 100%;
+    white-space: nowrap;
+    overflow: scroll;
+    text-align: left;
+    padding: 0 0.53rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#tablist .item-block .item {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 0.32rem;
+}
+
+#tablist .item-block .item .image {
+    width: 100%;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 0.21rem;
+}
+
+#tablist .item-block .item .title {
+    white-space: normal;
+    font-size: 0.37rem;
+}
+
+.grey-space {
+    width: 100%;
+    height: 0.3rem;
+    background: #f7f7f7;
+    margin: 0.53rem 0;
+}
+
+.list-container .grey-space:last-child {
+    display: none;
+}
+
+.list-container .list {
+    padding: 0.53rem 0;
+}
+
+.list-container .list .title-block {
+    padding: 0 0.53rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.list-container .list .title-block .image {
+    width: 100%;
+    border-radius: 0.21rem;
+    object-fit: cover;
+    margin-bottom: 0.32rem;
+}
+
+.list-container .list .title-block .title {
+    font-size: 0.53rem;
+    font-weight: bold;
+    margin-bottom: 0.32rem;
+}
+
+.list-container .list .title-block .content {
+    font-size: 0.37rem;
+}
+
+.list-container .item-block {
+    padding: 0 0.53rem;
+}
+
+.list-container .item-block .item {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 0.64rem;
+}
+
+.list-container .item-block .item .left {
+    flex-shrink: 0;
+    width: 3.33rem;
+    height: 2.9rem;
+    object-fit: cover;
+    border-radius: 0.08rem;
+}
+
+.list-container .item-block .item .right {
+    width: 100%;
+    padding-left: 0.48rem;
+    position: relative;
+}
+
+.list-container .item-block .item .right .title {
+    font-size: 0.4rem;
+    font-weight: bold;
+    margin-bottom: 0.11rem;
+}
+
+.list-container .item-block .item .right .price-block {
+    margin-bottom: 0.11rem;
+}
+
+.list-container .item-block .item .right .price-block div {
+    display: inline-block;
+}
+
+.list-container .item-block .item .right .price-block .price1 {
+    font-size: 0.43rem;
+    font-weight: bold;
+    color: #bc5c5c;
+}
+
+.list-container .item-block .item .right .price-block .unit {
+    font-size: 0.37rem;
+    margin-right: 0.08rem;
+}
+
+.list-container .item-block .item .right .price-block .price2 {
+    font-size: 0.37rem;
+    text-decoration: line-through;
+    color: #aeaeae;
+}
+
+.list-container .item-block .item .button {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    font-size: 0.37rem;
+    padding: 0.08rem 0.24rem;
+    border: solid #aeaeae 0.02rem;
+    border-radius: 0.08rem;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.list-container .item-block .item:active .button {
+    background: #aeaeae;
+    color: #fff;
+}
+
+.blank-space {
+    width: 100%;
+    height: 3.8rem;
+    opacity: 0;
+}
