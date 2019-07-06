@@ -1,0 +1,21 @@
+{
+  "avatar": "https://raw.githubusercontent.com/yifanciv/yifanciv.github.io/master/images/avatar.jpg",
+  "name": "陈逸帆",
+  "introduction": "UI/UX设计，网页前端",
+  "email": "yifancn@hotmail.com",
+  "tel": "17688481184",
+  "website": [
+    {
+      "name": "instagram",
+      "link": "https://www.instagram.com/ivan.civ"
+    },
+    {
+      "name": "behance",
+      "link": "https://behance.net/ivanciv"
+    },
+    {
+      "name": "lofter",
+      "link": "http://ivanciv.lofter.com"
+    }
+  ]
+}
